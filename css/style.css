@@ -114,7 +114,6 @@ html {
     scroll-behavior: auto;
   }
 }
-
 body {
   margin: 0;
   color: #2f3437;
@@ -996,5 +995,336 @@ body {
   .site-footer__brand {
     font-size: 18px;
     line-height: 24px;
+  }
+}
+/* Le même conteneur aligne le hero et la frise avec les marges de la maquette. */
+.about-container {
+  width: calc(100% - 48px);
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.about-hero {
+  padding: 78px 0;
+  background-color: #f8f3eb;
+}
+
+.about-hero__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 420px;
+  gap: 92px;
+  align-items: center;
+}
+
+.about-hero__title {
+  margin: 0 0 32px;
+  color: rgb(7, 143, 167);
+  font-family: "Rajdhani", Arial, sans-serif;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 1.05;
+}
+
+.about-hero__title span {
+  display: block;
+}
+
+.about-hero__title-accent {
+  color: #d8894f;
+  font-size: 58px;
+}
+
+.about-hero__description {
+  max-width: 530px;
+  margin: 0 0 34px;
+  color: #0b0b0b;
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.about-hero__cv {
+  gap: 10px;
+}
+
+.about-hero__cv img {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.about-hero__illustration {
+  display: flex;
+  justify-content: center;
+}
+
+.about-hero__image {
+  display: block;
+  width: 410px;
+  max-width: 100%;
+}
+
+.about-timeline {
+  padding: 64px 0 96px;
+}
+
+.timeline-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 52px;
+}
+
+.timeline-filters__button {
+  min-height: 42px;
+  padding: 9px 22px;
+  color: rgb(7, 143, 167);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: #ffffff;
+  border: 2px solid rgb(7, 143, 167);
+  border-radius: 6px;
+}
+
+.timeline-filters__button:hover,
+.timeline-filters__button.is-active {
+  color: #ffffff;
+  background-color: rgb(7, 143, 167);
+}
+
+.timeline-filters__button:focus-visible {
+  outline: 3px solid #0b0b0b;
+  outline-offset: 3px;
+}
+
+/* La ligne centrale est indépendante des cartes afin de rester continue. */
+.timeline-list {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.timeline-list::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 3px;
+  content: "";
+  background-color: rgb(7, 143, 167);
+  transform: translateX(-50%);
+}
+
+.timeline-entry {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 116px minmax(0, 1fr);
+  align-items: center;
+  min-height: 236px;
+}
+
+.timeline-entry[hidden] {
+  display: none;
+}
+
+.timeline-entry::before {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  content: "";
+  background-color: #ffffff;
+  border: 4px solid rgb(7, 143, 167);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.timeline-entry__date {
+  z-index: 3;
+  grid-column: 2;
+  justify-self: center;
+  min-width: 94px;
+  padding: 8px 12px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.timeline-entry--training .timeline-entry__date {
+  background-color: rgb(7, 143, 167);
+}
+
+.timeline-entry--experience .timeline-entry__date {
+  background-color: #d8894f;
+}
+
+.timeline-card {
+  padding: 25px 28px;
+  border: 1px solid;
+  border-radius: 8px;
+  box-shadow: 0 7px 18px rgba(11, 11, 11, 0.06);
+}
+
+.timeline-entry--left .timeline-card {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.timeline-entry--right .timeline-card {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.timeline-entry--training .timeline-card {
+  background-color: #eef9fb;
+  border-color: #b9e1e8;
+}
+
+.timeline-entry--experience .timeline-card {
+  background-color: #fff5eb;
+  border-color: #f1d0b5;
+}
+
+.timeline-card h3 {
+  margin: 0 0 8px;
+  color: #0b0b0b;
+  font-family: "Rajdhani", Arial, sans-serif;
+  font-size: 23px;
+  line-height: 1.2;
+}
+
+.timeline-card p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.timeline-card__organization {
+  margin-bottom: 14px !important;
+  color: rgb(7, 143, 167);
+  font-weight: 600;
+}
+
+.timeline-entry--experience .timeline-card__organization {
+  color: #d8894f;
+}
+
+/* Sur tablette, la frise reste alternée mais les cartes sont plus compactes. */
+@media screen and (max-width: 1023px) {
+  .about-container {
+    width: calc(100% - 80px);
+  }
+  .about-hero {
+    padding: 66px 0;
+  }
+  .about-hero__inner {
+    grid-template-columns: minmax(0, 1fr) 280px;
+    gap: 48px;
+  }
+  .about-hero__title {
+    margin-bottom: 24px;
+    font-size: 40px;
+  }
+  .about-hero__title-accent {
+    font-size: 46px;
+  }
+  .about-hero__description {
+    margin-bottom: 26px;
+    font-size: 16px;
+  }
+  .about-hero__image {
+    width: 280px;
+  }
+  .about-timeline {
+    padding: 58px 0 80px;
+  }
+  .timeline-filters {
+    display: none;
+  }
+  .timeline-entry {
+    grid-template-columns: minmax(0, 1fr) 84px minmax(0, 1fr);
+    min-height: 250px;
+  }
+  .timeline-entry__date {
+    min-width: 80px;
+    padding: 7px 8px;
+    font-size: 12px;
+  }
+  .timeline-card {
+    padding: 20px;
+  }
+  .timeline-card h3 {
+    font-size: 20px;
+  }
+  .timeline-card p {
+    font-size: 14px;
+  }
+}
+/* Sur mobile, toutes les cartes passent à droite d'une ligne unique. */
+@media screen and (max-width: 600px) {
+  .about-container {
+    width: calc(100% - 48px);
+  }
+  .about-hero {
+    padding: 44px 0 38px;
+  }
+  .about-hero__inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .about-hero__title {
+    font-size: 36px;
+  }
+  .about-hero__title-accent {
+    font-size: 41px;
+  }
+  .about-hero__description {
+    font-size: 16px;
+  }
+  .about-hero__cv {
+    width: 100%;
+  }
+  .about-hero__image {
+    width: 255px;
+  }
+  .about-timeline {
+    padding: 50px 0 66px;
+  }
+  .timeline-list {
+    padding-left: 24px;
+  }
+  .timeline-list::before {
+    left: 6px;
+    transform: none;
+  }
+  .timeline-entry {
+    display: block;
+    min-height: 0;
+    margin-bottom: 28px;
+  }
+  .timeline-entry::before {
+    top: 18px;
+    left: -18px;
+    transform: translate(-50%, -50%);
+  }
+  .timeline-entry__date {
+    position: relative;
+    display: inline-block;
+    min-width: 94px;
+    margin: 0 0 -12px 16px;
+    font-size: 13px;
+  }
+  .timeline-card {
+    padding: 28px 18px 20px;
+  }
+  .timeline-card h3 {
+    font-size: 20px;
+  }
+  .timeline-card p {
+    font-size: 14px;
   }
 }

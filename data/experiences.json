@@ -1,0 +1,184 @@
+{
+  "meta": {
+    "description": "Expériences professionnelles et formations affichées dans la frise de la page À propos.",
+    "order": "newest-first"
+  },
+  "filters": [
+    {
+      "id": "all",
+      "label": "Tout"
+    },
+    {
+      "id": "training",
+      "label": "Formations"
+    },
+    {
+      "id": "experience",
+      "label": "Expériences professionnelles"
+    }
+  ],
+  "experiences": [
+    {
+      "id": 1,
+      "period": "2026",
+      "title": "Développeur web full stack",
+      "organization": "Webecom",
+      "description": "Formation professionnelle en développement web full stack avec obtention d'une certification.",
+      "categoryId": "training",
+      "categoryLabel": "Formation"
+    },
+    {
+      "id": 2,
+      "period": "2020 – 2025",
+      "title": "Consultant digital freelance",
+      "organization": "Pragma6 — Région parisienne",
+      "description": "Transformation digitale, développement d'applications et création de sites web, avec animation de formations pour divers clients.",
+      "categoryId": "experience",
+      "categoryLabel": "Expérience professionnelle"
+    },
+    {
+      "id": 3,
+      "period": "2022",
+      "title": "Formation WINDEV Mobile",
+      "organization": "PC SOFT",
+      "description": "Formation au développement d'applications mobiles avec WINDEV Mobile pour Android et iOS.",
+      "categoryId": "training",
+      "categoryLabel": "Formation"
+    },
+    {
+      "id": 4,
+      "period": "2017 – 2020",
+      "title": "Concepteur d'outils pédagogiques digitaux",
+      "organization": "High Potential Management — Paris 8",
+      "description": "Conception de dispositifs de formation digitaux et animation de sessions hybrides en prise de parole pour cadres à haut potentiel — TotalEnergies.",
+      "categoryId": "experience",
+      "categoryLabel": "Expérience professionnelle"
+    },
+    {
+      "id": 5,
+      "period": "2018",
+      "title": "Formation WEBDEV avancé",
+      "organization": "PC SOFT",
+      "description": "Perfectionnement WEBDEV pour concevoir des applications web complexes et sécurisées.",
+      "categoryId": "training",
+      "categoryLabel": "Formation"
+    },
+    {
+      "id": 6,
+      "period": "2017",
+      "title": "Formation WEBDEV intermédiaire",
+      "organization": "PC SOFT",
+      "description": "Approfondissement de WEBDEV pour développer des applications web professionnelles et optimiser l'accès aux données.",
+      "categoryId": "training",
+      "categoryLabel": "Formation"
+    },
+    {
+      "id": 7,
+      "period": "2016",
+      "title": "Formation WEBDEV fondamentaux",
+      "organization": "PC SOFT",
+      "description": "Formation aux fondamentaux de WEBDEV pour concevoir rapidement des applications web connectées aux bases de données.",
+      "categoryId": "training",
+      "categoryLabel": "Formation"
+    },
+    {
+      "id": 8,
+      "period": "2011 – 2016",
+      "title": "Cofondateur & Business Developer",
+      "organization": "Startup IONOSYS — Paris",
+      "description": "Développement d'un bracelet biométrique connecté pour le contrôle d'accès sur sites sensibles.",
+      "categoryId": "experience",
+      "categoryLabel": "Expérience professionnelle"
+    },
+    {
+      "id": 9,
+      "period": "2012",
+      "title": "Responsable de centre de profit",
+      "organization": "CEGOS",
+      "description": "Formation au pilotage stratégique, financier et managérial d'une unité économique autonome.",
+      "categoryId": "training",
+      "categoryLabel": "Formation"
+    },
+    {
+      "id": 10,
+      "period": "2012",
+      "title": "Formation anglais professionnel",
+      "organization": "Wall Street Institute",
+      "description": "Formation en anglais orientée communication professionnelle avec pratique orale et modules multimédias interactifs.",
+      "categoryId": "training",
+      "categoryLabel": "Formation"
+    },
+    {
+      "id": 11,
+      "period": "2006 – 2011",
+      "title": "Directeur de centre de profit",
+      "organization": "Le Choix Funéraire — 44",
+      "description": "Pilotage d'activité et transformation digitale des services funéraires, incluant déploiement d'outils informatiques et gestion des systèmes.",
+      "categoryId": "experience",
+      "categoryLabel": "Expérience professionnelle"
+    },
+    {
+      "id": 12,
+      "period": "2004 – 2006",
+      "title": "Directeur commercial",
+      "organization": "DEV Gestion 44",
+      "description": "Audit et conseil en marketing, informatique et organisation pour entreprises, avec déploiement de solutions digitales.",
+      "categoryId": "experience",
+      "categoryLabel": "Expérience professionnelle"
+    },
+    {
+      "id": 13,
+      "period": "2000 – 2004",
+      "title": "Directeur commercial adjoint",
+      "organization": "ACS Production",
+      "description": "Promotion cadre et pilotage de projets internationaux de structures innovantes, avec participation aux négociations et au développement de la filiale US.",
+      "categoryId": "experience",
+      "categoryLabel": "Expérience professionnelle"
+    },
+    {
+      "id": 14,
+      "period": "1996 – 2000",
+      "title": "Technico-commercial DAO",
+      "organization": "ACS Production",
+      "description": "Réponse aux appels d'offres pour structures métalliques et membranes tendues, avec modélisation technique et mise en place des outils informatiques.",
+      "categoryId": "experience",
+      "categoryLabel": "Expérience professionnelle"
+    },
+    {
+      "id": 15,
+      "period": "1995 – 1996",
+      "title": "Assistant informatique judiciaire",
+      "organization": "Gendarmerie nationale — Paris 4e",
+      "description": "Appui informatique au service de recherches judiciaires et formation des gendarmes aux outils numériques.",
+      "categoryId": "experience",
+      "categoryLabel": "Expérience professionnelle"
+    },
+    {
+      "id": 16,
+      "period": "1994 – 1995",
+      "title": "Dessinateur métreur",
+      "organization": "Survey International Business — Pornichet (44)",
+      "description": "Relevés terrain, modélisation visuelle et conception de dossiers de rénovation pour la mise aux normes graphiques de réseaux de magasins.",
+      "categoryId": "experience",
+      "categoryLabel": "Expérience professionnelle"
+    },
+    {
+      "id": 17,
+      "period": "1993 – 1994",
+      "title": "Licence mécanique des structures",
+      "organization": "UPMC — Paris VI",
+      "description": "Formation en mécanique des structures appliquée à l'ingénierie et à l'analyse des systèmes mécaniques.",
+      "categoryId": "training",
+      "categoryLabel": "Formation"
+    },
+    {
+      "id": 18,
+      "period": "1991 – 1993",
+      "title": "DUT Génie civil",
+      "organization": "IUT de Saint-Nazaire",
+      "description": "Formation en génie civil avec spécialisation en informatique, CAO/DAO et gestion de projets.",
+      "categoryId": "training",
+      "categoryLabel": "Formation"
+    }
+  ]
+}
