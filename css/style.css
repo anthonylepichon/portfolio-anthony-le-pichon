@@ -267,7 +267,7 @@ body {
   border-bottom-color: rgb(7, 143, 167);
 }
 
-/* Ce lien déclenche directement le téléchargement du CV au format PDF. */
+/* Ce lien ouvre le CV dans un nouvel onglet pour permettre sa lecture avant téléchargement. */
 .site-navigation__cv {
   display: inline-flex;
   align-items: center;
