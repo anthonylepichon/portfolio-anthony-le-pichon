@@ -1,7 +1,7 @@
 {
   "meta": {
     "description": "Données utilisées pour afficher et filtrer les projets du portfolio.",
-    "defaultImage": "../assets/images/projects/projet-generique.webp"
+    "defaultImage": "/assets/images/illustrations/projets.svg"
   },
   "filters": [
     {

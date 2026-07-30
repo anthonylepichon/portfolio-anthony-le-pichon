@@ -47,11 +47,13 @@
   display: flex;
   align-items: center;
   height: 64px;
-  color: #006f82;
+  /* Ces deux couleurs reprennent exactement l'identité visuelle de la maquette. */
+  color: rgb(7, 143, 167);
   font-family: "Rajdhani", Arial, sans-serif;
-  font-size: 26px;
+  font-size: 30px;
   font-weight: 700;
-  line-height: 1;
+  line-height: 45px;
+  letter-spacing: 0;
   text-decoration: none;
   white-space: nowrap;
 }
@@ -68,8 +70,7 @@
 }
 
 .site-header__surname {
-  color: #a95016;
-  font-size: 22px;
+  color: #d8894f;
 }
 
 .site-header__menu-button {
@@ -88,7 +89,7 @@
   width: 20px;
   height: 3px;
   margin: 3px 0;
-  background-color: #006f82;
+  background-color: rgb(7, 143, 167);
   border-radius: 2px;
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
@@ -134,14 +135,45 @@
 .site-navigation__link:hover,
 .site-navigation__link:focus-visible,
 .site-navigation__link[aria-current="page"] {
-  color: #006f82;
-  border-bottom-color: #006f82;
+  color: rgb(7, 143, 167);
+  border-bottom-color: rgb(7, 143, 167);
+}
+
+/* Ce lien déclenche directement le téléchargement du CV au format PDF. */
+.site-navigation__cv {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 92px;
+  min-height: 42px;
+  padding: 8px 18px;
+  color: #ffffff;
+  font-family: "Rajdhani", Arial, sans-serif;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: none;
+  background-color: rgb(7, 143, 167);
+  border-radius: 8px;
+}
+
+.site-navigation__cv img {
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+
+.site-navigation__cv:hover,
+.site-navigation__cv:focus-visible {
+  background-color: #0b0b0b;
 }
 
 .site-header__brand:focus-visible,
 .site-header__menu-button:focus-visible,
-.site-navigation__link:focus-visible {
-  outline: 3px solid #006f82;
+.site-navigation__link:focus-visible,
+.site-navigation__cv:focus-visible {
+  outline: 3px solid rgb(7, 143, 167);
   outline-offset: 3px;
 }
 
@@ -155,16 +187,13 @@
 
   .site-header__brand {
     font-size: 20px;
+    line-height: 30px;
   }
 
   .site-header__logo {
     width: 54px;
     height: 53px;
     margin-left: -10px;
-  }
-
-  .site-header__surname {
-    font-size: 17px;
   }
 
   .site-header__menu-button {
@@ -204,6 +233,11 @@
   .site-navigation__link[aria-current="page"] {
     border-bottom-color: transparent;
   }
+
+  .site-navigation__cv {
+    width: 100%;
+    margin-top: 12px;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -214,10 +248,7 @@
 
   .site-header__brand {
     font-size: 18px;
-  }
-
-  .site-header__surname {
-    font-size: 15px;
+    line-height: 27px;
   }
 
   .site-navigation__list {

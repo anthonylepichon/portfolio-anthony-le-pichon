@@ -55,48 +55,232 @@
                     <li><a class="site-navigation__link" href="pages/competences.html">Compétences</a></li>
                     <li><a class="site-navigation__link" href="pages/projets.html">Projets</a></li>
                     <li><a class="site-navigation__link" href="pages/contact.html">Contact</a></li>
+                    <li>
+                        <a
+                            class="site-navigation__cv"
+                            href="assets/documents/CV/CV-anthony-le-pichon.pdf"
+                            download="cv-anthony-le-pichon.pdf"
+                            aria-label="Télécharger le CV d'Anthony Le Pichon au format PDF"
+                        >
+                            <img src="assets/images/icons/download.svg" alt="">
+                            <span>CV</span>
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!--
-        La balise main contient le contenu principal et unique de cette page.
-        Chaque section possède un identifiant utilisé par les liens de navigation.
-    -->
     <main id="main-content" tabindex="-1">
-        <section id="accueil">
-            <p>Bonjour, je suis</p>
-            <h1>Anthony Le Pichon</h1>
-            <p>Développeur web junior</p>
+        <!-- Cette première section présente clairement le métier et la proposition de valeur. -->
+        <section id="accueil" class="home-hero" aria-labelledby="home-title">
+            <div class="home-container home-hero__inner">
+                <div class="home-hero__content">
+                    <h1 id="home-title" class="home-hero__title">
+                        <span>Développeur Web</span>
+                        <span class="text-accent">Full Stack</span>
+                    </h1>
 
-            <a href="#projets">Découvrir mes projets</a>
-            <a href="#contact">Me contacter</a>
+                    <p class="home-hero__description">
+                        Développeur Freelance Full Stack polyvalent, je crée des solutions digitales
+                        performantes en combinant mon expertise PC SOFT et les technologies web modernes.
+                    </p>
+
+                    <div class="home-hero__actions">
+                        <a class="button button--primary" href="pages/contact.html">Commencer</a>
+                        <a class="button button--secondary" href="pages/a-propos.html">À propos</a>
+                    </div>
+                </div>
+
+                <div class="home-hero__portrait">
+                    <img
+                        class="home-hero__portrait-image"
+                        src="assets/images/profile/portrait-anthony-le-pichon.png"
+                        alt="Portrait d'Anthony Le Pichon"
+                    >
+                </div>
+            </div>
         </section>
 
-        <section id="a-propos">
-            <h2>À propos</h2>
+        <section class="home-section home-vision" aria-labelledby="vision-title">
+            <div class="home-container home-vision__inner">
+                <div class="home-vision__illustration">
+                    <img
+                        class="home-vision__image"
+                        src="assets/images/illustrations/vision.svg"
+                        alt=""
+                    >
+                </div>
+
+                <div class="home-vision__content">
+                    <h2 id="vision-title" class="section-title">
+                        <span>Une vision business</span>
+                        <span class="text-accent">et une expertise technique</span>
+                    </h2>
+
+                    <ul class="benefit-list">
+                        <li class="benefit-list__item">
+                            <img class="benefit-list__check" src="assets/images/icons/check.svg" alt="">
+                            <div>
+                                <h3>Vision business &amp; ROI garanti</h3>
+                                <p>Une approche stratégique pour maximiser vos investissements.</p>
+                            </div>
+                        </li>
+                        <li class="benefit-list__item">
+                            <img class="benefit-list__check" src="assets/images/icons/check.svg" alt="">
+                            <div>
+                                <h3>Expérience entrepreneuriale</h3>
+                                <p>25 ans d'expérience entrepreneuriale et managériale.</p>
+                            </div>
+                        </li>
+                        <li class="benefit-list__item">
+                            <img class="benefit-list__check" src="assets/images/icons/check.svg" alt="">
+                            <div>
+                                <h3>Expertise complète</h3>
+                                <p>PC SOFT, WEBDEV, WINDEV Mobile et technologies web modernes.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
-        <section id="competences">
-            <h2>Mes compétences</h2>
+        <section id="projets" class="home-section home-projects" aria-labelledby="projects-title">
+            <div class="home-container">
+                <h2 id="projects-title" class="section-title section-title--inline">
+                    <span>Mes</span> <span class="text-accent">réalisations</span>
+                </h2>
+
+                <!-- JavaScript remplacera ce message par les trois premières données du fichier JSON. -->
+                <div id="projects-list" class="project-grid">
+                    <p class="project-grid__status" role="status">Chargement des projets…</p>
+                </div>
+
+                <noscript>
+                    <p class="project-grid__status">Activez JavaScript pour afficher les projets.</p>
+                </noscript>
+
+                <div class="home-projects__action">
+                    <a class="button button--secondary" href="pages/projets.html">Voir tous mes projets</a>
+                </div>
+            </div>
         </section>
 
-        <section id="projets">
-            <h2>Mes projets</h2>
+        <section class="home-section home-choice" aria-labelledby="choice-title">
+            <div class="home-container home-choice__inner">
+                <div class="home-choice__content">
+                    <h2 id="choice-title" class="section-title section-title--inline">
+                        <span>Pourquoi</span> <span class="text-accent">me choisir</span>
+                    </h2>
+
+                    <p class="home-choice__introduction">
+                        J'allie expertise technique approfondie et vision business pour créer des
+                        solutions digitales rentables et pérennes.
+                    </p>
+
+                    <ul class="choice-list">
+                        <li class="choice-list__item">
+                            <img class="choice-list__icon" src="assets/images/icons/code.svg" alt="">
+                            <div>
+                                <h3>Double expertise PC SOFT &amp; Full Stack</h3>
+                                <p>Maîtrise approfondie des environnements web et PC SOFT.</p>
+                            </div>
+                        </li>
+                        <li class="choice-list__item">
+                            <img class="choice-list__icon" src="assets/images/icons/group.svg" alt="">
+                            <div>
+                                <h3>Vision business &amp; ROI garanti</h3>
+                                <p>Une approche pragmatique, orientée résultats.</p>
+                            </div>
+                        </li>
+                        <li class="choice-list__item">
+                            <img class="choice-list__icon" src="assets/images/icons/arrow.svg" alt="">
+                            <div>
+                                <h3>Accompagnement complet</h3>
+                                <p>De la conception au déploiement, je vous accompagne à chaque étape.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="home-choice__illustration">
+                    <img
+                        class="home-choice__image"
+                        src="assets/images/illustrations/accompagnement.svg"
+                        alt=""
+                    >
+                </div>
+            </div>
         </section>
 
-        <section id="contact">
-            <h2>Me contacter</h2>
+        <section class="home-contact" aria-labelledby="contact-title">
+            <div class="home-container home-contact__inner">
+                <h2 id="contact-title">Travaillons ensemble sur votre prochain projet</h2>
+                <p>
+                    Vous avez un projet en tête ?<br>
+                    Discutons-en ensemble et créons quelque chose d'exceptionnel.
+                </p>
+                <a class="button button--light" href="pages/contact.html">Contactez-moi</a>
+            </div>
         </section>
     </main>
 
-    <!-- Le pied de page accueillera les informations secondaires et légales. -->
-    <footer>
-        <p>Portfolio d'Anthony Le Pichon</p>
+    <footer class="site-footer">
+        <div class="home-container site-footer__inner">
+            <div class="site-footer__identity">
+                <a
+                    class="site-footer__brand"
+                    href="index.html"
+                    aria-label="Accueil du portfolio d'Anthony Le Pichon"
+                >
+                    <img class="site-footer__logo" src="assets/images/logos/logo.svg" alt="">
+                    <span>Anthony <span class="site-footer__surname">LE PICHON</span></span>
+                </a>
+
+                <ul class="site-footer__socials" aria-label="Réseaux professionnels">
+                    <li>
+                        <a
+                            href="https://www.linkedin.com/in/anthonylepichon/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Profil LinkedIn d'Anthony Le Pichon, nouvel onglet"
+                        >
+                            <img src="assets/images/icons/linkedin.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://github.com/anthonylepichon"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Profil GitHub d'Anthony Le Pichon, nouvel onglet"
+                        >
+                            <img src="assets/images/icons/github.svg" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <nav class="site-footer__navigation" aria-label="Navigation secondaire">
+                <ul>
+                    <li><a href="index.html" aria-current="page">Accueil</a></li>
+                    <li><a href="pages/a-propos.html">À propos</a></li>
+                    <li><a href="pages/competences.html">Compétences</a></li>
+                    <li><a href="pages/projets.html">Projets</a></li>
+                </ul>
+            </nav>
+
+            <address class="site-footer__contact">
+                <a href="mailto:contact@anthonylepichon.com">contact@anthonylepichon.com</a>
+                <a href="https://wa.me/33682064582">+33 (0)6 82 06 45 82</a>
+                <p>Organisation en télétravail</p>
+                <a href="pages/contact.html">Contact en ligne</a>
+            </address>
+        </div>
     </footer>
 
     <!-- Le script est placé à la fin pour que le HTML soit chargé avant son exécution. -->
     <script src="js/header.js"></script>
+    <script src="js/projects.js"></script>
 </body>
 </html>

@@ -175,11 +175,13 @@ body {
   display: flex;
   align-items: center;
   height: 64px;
-  color: #006f82;
+  /* Ces deux couleurs reprennent exactement l'identité visuelle de la maquette. */
+  color: rgb(7, 143, 167);
   font-family: "Rajdhani", Arial, sans-serif;
-  font-size: 26px;
+  font-size: 30px;
   font-weight: 700;
-  line-height: 1;
+  line-height: 45px;
+  letter-spacing: 0;
   text-decoration: none;
   white-space: nowrap;
 }
@@ -196,8 +198,7 @@ body {
 }
 
 .site-header__surname {
-  color: #a95016;
-  font-size: 22px;
+  color: #d8894f;
 }
 
 .site-header__menu-button {
@@ -216,7 +217,7 @@ body {
   width: 20px;
   height: 3px;
   margin: 3px 0;
-  background-color: #006f82;
+  background-color: rgb(7, 143, 167);
   border-radius: 2px;
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
@@ -262,14 +263,45 @@ body {
 .site-navigation__link:hover,
 .site-navigation__link:focus-visible,
 .site-navigation__link[aria-current=page] {
-  color: #006f82;
-  border-bottom-color: #006f82;
+  color: rgb(7, 143, 167);
+  border-bottom-color: rgb(7, 143, 167);
+}
+
+/* Ce lien déclenche directement le téléchargement du CV au format PDF. */
+.site-navigation__cv {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 92px;
+  min-height: 42px;
+  padding: 8px 18px;
+  color: #ffffff;
+  font-family: "Rajdhani", Arial, sans-serif;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: none;
+  background-color: rgb(7, 143, 167);
+  border-radius: 8px;
+}
+
+.site-navigation__cv img {
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+
+.site-navigation__cv:hover,
+.site-navigation__cv:focus-visible {
+  background-color: #0b0b0b;
 }
 
 .site-header__brand:focus-visible,
 .site-header__menu-button:focus-visible,
-.site-navigation__link:focus-visible {
-  outline: 3px solid #006f82;
+.site-navigation__link:focus-visible,
+.site-navigation__cv:focus-visible {
+  outline: 3px solid rgb(7, 143, 167);
   outline-offset: 3px;
 }
 
@@ -282,14 +314,12 @@ body {
   }
   .site-header__brand {
     font-size: 20px;
+    line-height: 30px;
   }
   .site-header__logo {
     width: 54px;
     height: 53px;
     margin-left: -10px;
-  }
-  .site-header__surname {
-    font-size: 17px;
   }
   .site-header__menu-button {
     display: block;
@@ -323,6 +353,10 @@ body {
   .site-navigation__link[aria-current=page] {
     border-bottom-color: transparent;
   }
+  .site-navigation__cv {
+    width: 100%;
+    margin-top: 12px;
+  }
 }
 @media screen and (max-width: 480px) {
   .site-header__inner {
@@ -331,9 +365,7 @@ body {
   }
   .site-header__brand {
     font-size: 18px;
-  }
-  .site-header__surname {
-    font-size: 15px;
+    line-height: 27px;
   }
   .site-navigation__list {
     padding-right: 24px;
@@ -344,5 +376,604 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .site-header__menu-line {
     transition: none;
+  }
+}
+/* Ce conteneur aligne les différentes sections avec le header. */
+.home-container {
+  width: calc(100% - 48px);
+  max-width: 1224px;
+  margin: 0 auto;
+}
+
+.text-accent {
+  color: #a95016;
+}
+
+.section-title {
+  margin: 0 0 32px;
+  color: rgb(7, 143, 167);
+  font-family: "Rajdhani", Arial, sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.12;
+}
+
+.section-title span {
+  display: block;
+}
+
+.section-title--inline span {
+  display: inline;
+}
+
+.home-section {
+  padding: 80px 0;
+}
+
+/* Les boutons sont des liens car ils conduisent vers une autre page. */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 12px 30px;
+  color: rgb(7, 143, 167);
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid rgb(7, 143, 167);
+  border-radius: 8px;
+}
+
+.button--primary {
+  color: #ffffff;
+  background-color: rgb(7, 143, 167);
+}
+
+.button--secondary {
+  background-color: #ffffff;
+}
+
+.button--light {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: #ffffff;
+}
+
+.button:hover,
+.button:focus-visible {
+  color: #ffffff;
+  background-color: #0b0b0b;
+  border-color: #0b0b0b;
+}
+
+.button:focus-visible {
+  outline: 3px solid #0b0b0b;
+  outline-offset: 3px;
+}
+
+/* Présentation principale */
+.home-hero {
+  padding: 82px 0;
+  background-color: #f8f3eb;
+}
+
+.home-hero__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 480px;
+  gap: 96px;
+  align-items: center;
+  /* Le hero est plus étroit que la grille des projets sur la maquette desktop. */
+  max-width: 1024px;
+}
+
+.home-hero__title {
+  margin: 0 0 42px;
+  color: rgb(7, 143, 167);
+  font-family: "Rajdhani", Arial, sans-serif;
+  font-size: 58px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.home-hero__title span {
+  display: block;
+}
+
+.home-hero__description {
+  max-width: 590px;
+  margin: 0 0 42px;
+  color: #0b0b0b;
+  font-size: 19px;
+  line-height: 1.55;
+}
+
+.home-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.home-hero__portrait {
+  display: flex;
+  justify-content: center;
+}
+
+.home-hero__portrait-image {
+  display: block;
+  width: 430px;
+  max-width: 100%;
+}
+
+/* Vision business */
+.home-vision__inner {
+  display: grid;
+  grid-template-columns: 430px minmax(0, 1fr);
+  gap: 92px;
+  align-items: center;
+  /* Cette section reprend les mêmes marges latérales que le hero. */
+  max-width: 1024px;
+}
+
+.home-vision__illustration {
+  display: flex;
+  justify-content: center;
+}
+
+.home-vision__image {
+  display: block;
+  width: 420px;
+  max-width: 100%;
+}
+
+.benefit-list,
+.choice-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.benefit-list {
+  display: grid;
+  gap: 28px;
+}
+
+.benefit-list__item {
+  display: grid;
+  grid-template-columns: 22px minmax(0, 1fr);
+  gap: 14px;
+  align-items: start;
+}
+
+.benefit-list__check {
+  display: block;
+  width: 20px;
+  height: 20px;
+  padding: 3px;
+  margin-top: 4px;
+  border: 2px solid rgb(7, 143, 167);
+  border-radius: 50%;
+}
+
+.benefit-list h3,
+.choice-list h3,
+.project-card h3 {
+  margin: 0;
+  color: #0b0b0b;
+  font-family: "Rajdhani", Arial, sans-serif;
+  font-weight: 700;
+}
+
+.benefit-list h3 {
+  font-size: 23px;
+}
+
+.benefit-list p,
+.choice-list p {
+  margin: 6px 0 0;
+  line-height: 1.5;
+}
+
+/* Réalisations */
+.home-projects {
+  background-color: #f8f3eb;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+}
+
+.project-grid__status {
+  grid-column: 1/-1;
+  margin: 0;
+  text-align: center;
+}
+
+.project-card {
+  overflow: hidden;
+  background-color: #ffffff;
+  border: 1px solid #cbe5ea;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(11, 11, 11, 0.05);
+}
+
+.project-card__image {
+  display: block;
+  width: 100%;
+  height: 220px;
+  padding: 18px;
+  object-fit: contain;
+  background-color: #eef9fb;
+  border-bottom: 1px solid #cbe5ea;
+}
+
+.project-card__content {
+  padding: 24px;
+}
+
+.project-card h3 {
+  min-height: 58px;
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+.project-card__category {
+  display: inline-block;
+  padding: 5px 12px;
+  margin: 18px 0;
+  color: rgb(7, 143, 167);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 1px solid rgb(7, 143, 167);
+  border-radius: 20px;
+}
+
+.project-card__description {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.home-projects__action {
+  margin-top: 48px;
+  text-align: center;
+}
+
+/* Pourquoi me choisir */
+.home-choice__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 80px;
+  align-items: center;
+  /* Le contenu reste centré dans la largeur réduite prévue par la maquette. */
+  max-width: 1024px;
+}
+
+.home-choice__introduction {
+  max-width: 700px;
+  margin: 0 0 36px;
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.choice-list {
+  display: grid;
+  gap: 26px;
+}
+
+.choice-list__item {
+  display: grid;
+  grid-template-columns: 50px minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.choice-list__icon {
+  display: block;
+  width: 48px;
+  height: 48px;
+  padding: 12px;
+  background-color: rgb(7, 143, 167);
+  border-radius: 10px;
+}
+
+.choice-list h3 {
+  font-size: 23px;
+}
+
+.home-choice__illustration {
+  display: flex;
+  justify-content: center;
+}
+
+.home-choice__image {
+  display: block;
+  width: 330px;
+  max-width: 100%;
+}
+
+/* Appel à l'action */
+.home-contact {
+  padding: 78px 0;
+  color: #ffffff;
+  text-align: center;
+  background-color: rgb(7, 143, 167);
+}
+
+.home-contact__inner {
+  max-width: 850px;
+}
+
+.home-contact h2 {
+  margin: 0 0 22px;
+  font-family: "Rajdhani", Arial, sans-serif;
+  font-size: 38px;
+  line-height: 1.2;
+}
+
+.home-contact p {
+  margin: 0 0 30px;
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+/* Footer de la page d'accueil */
+.site-footer {
+  padding: 56px 0;
+  background-color: #ffffff;
+}
+
+.site-footer__inner {
+  display: grid;
+  grid-template-columns: 1.4fr 0.7fr 1fr;
+  gap: 72px;
+  align-items: start;
+}
+
+.site-footer__brand {
+  display: inline-flex;
+  align-items: center;
+  /* Le nom conserve les couleurs exactes du logo, comme dans le header. */
+  color: rgb(7, 143, 167);
+  font-family: "Rajdhani", Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 0;
+  text-decoration: none;
+}
+
+.site-footer__logo {
+  display: block;
+  width: 62px;
+  margin-left: -11px;
+}
+
+.site-footer__surname {
+  color: #d8894f;
+}
+
+.site-footer__socials,
+.site-footer__navigation ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.site-footer__socials {
+  display: flex;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.site-footer__socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background-color: rgb(7, 143, 167);
+  border-radius: 8px;
+}
+
+.site-footer__socials img {
+  display: block;
+  width: 22px;
+  height: 22px;
+}
+
+.site-footer__navigation li + li {
+  margin-top: 10px;
+}
+
+.site-footer__navigation a,
+.site-footer__contact a {
+  color: #2f3437;
+  text-decoration: none;
+}
+
+.site-footer__navigation a:hover,
+.site-footer__navigation a:focus-visible,
+.site-footer__contact a:hover,
+.site-footer__contact a:focus-visible {
+  color: rgb(7, 143, 167);
+  text-decoration: underline;
+}
+
+.site-footer__contact {
+  display: grid;
+  gap: 10px;
+  font-style: normal;
+}
+
+.site-footer__contact p {
+  margin: 0;
+}
+
+.site-footer a:focus-visible {
+  outline: 3px solid rgb(7, 143, 167);
+  outline-offset: 3px;
+}
+
+/* Mise en page tablette */
+@media screen and (max-width: 1023px) {
+  .home-container {
+    width: calc(100% - 80px);
+  }
+  .home-section {
+    padding: 68px 0;
+  }
+  .home-hero {
+    padding: 72px 0;
+  }
+  .home-hero__inner {
+    grid-template-columns: minmax(0, 1fr) 288px;
+    gap: 48px;
+  }
+  .home-hero__title {
+    margin-bottom: 24px;
+    font-size: 42px;
+  }
+  .home-hero__description {
+    margin-bottom: 24px;
+    font-size: 16px;
+  }
+  .home-hero__portrait-image {
+    width: 288px;
+  }
+  .section-title {
+    font-size: 30px;
+  }
+  .home-vision__inner {
+    grid-template-columns: 250px minmax(0, 1fr);
+    gap: 54px;
+  }
+  .home-vision__image {
+    width: 250px;
+  }
+  .benefit-list h3,
+  .choice-list h3 {
+    font-size: 20px;
+  }
+  .project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+  }
+  .home-choice__inner {
+    grid-template-columns: minmax(0, 1fr) 260px;
+    gap: 50px;
+  }
+  .choice-list__item {
+    display: block;
+  }
+  .choice-list__icon {
+    display: none;
+  }
+  .site-footer__inner {
+    grid-template-columns: 1.2fr 0.7fr 1.2fr;
+    gap: 40px;
+  }
+  .site-footer__brand {
+    font-size: 20px;
+    line-height: 27px;
+  }
+}
+/* Mise en page mobile */
+@media screen and (max-width: 600px) {
+  .home-container {
+    width: calc(100% - 48px);
+  }
+  .home-section {
+    padding: 58px 0;
+  }
+  .home-hero {
+    padding: 46px 0 40px;
+  }
+  .home-hero__inner,
+  .home-vision__inner,
+  .home-choice__inner {
+    grid-template-columns: 1fr;
+  }
+  .home-hero__inner {
+    gap: 46px;
+  }
+  .home-hero__title {
+    margin-bottom: 24px;
+    font-size: 36px;
+  }
+  .home-hero__description {
+    font-size: 16px;
+  }
+  .home-hero__actions {
+    flex-wrap: nowrap;
+  }
+  .button {
+    min-height: 48px;
+    padding: 10px 22px;
+  }
+  .home-hero__portrait-image {
+    width: 260px;
+  }
+  .section-title {
+    margin-bottom: 28px;
+    font-size: 31px;
+  }
+  .home-vision__inner {
+    gap: 44px;
+  }
+  .home-vision__image {
+    width: 250px;
+  }
+  .benefit-list {
+    gap: 26px;
+  }
+  .benefit-list h3,
+  .choice-list h3 {
+    font-size: 20px;
+  }
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .project-card__image {
+    height: 210px;
+  }
+  .project-card h3 {
+    min-height: 0;
+    font-size: 22px;
+  }
+  .home-choice__inner {
+    gap: 48px;
+  }
+  .home-choice__introduction {
+    font-size: 16px;
+  }
+  .home-choice__image {
+    width: 270px;
+  }
+  .home-contact {
+    padding: 58px 0;
+  }
+  .home-contact h2 {
+    font-size: 29px;
+  }
+  .home-contact p {
+    font-size: 16px;
+  }
+  .site-footer {
+    padding: 42px 0;
+  }
+  .site-footer__inner {
+    grid-template-columns: 1fr 1.4fr;
+    gap: 36px 24px;
+  }
+  .site-footer__identity {
+    grid-column: 1/-1;
+  }
+  .site-footer__brand {
+    font-size: 18px;
+    line-height: 24px;
   }
 }
