@@ -1,0 +1,28 @@
+{
+  "description": "Polices locales utilisées par le portfolio.",
+  "provider": "Google Fonts",
+  "repository": "https://github.com/google/fonts",
+  "fonts": {
+    "Inter": {
+      "version": "v20",
+      "files": ["inter/inter-latin.woff2"],
+      "weights": [400, 500, 600, 700]
+    },
+    "Rajdhani": {
+      "version": "v17",
+      "files": [
+        "rajdhani/rajdhani-regular-400.woff2",
+        "rajdhani/rajdhani-medium-500.woff2",
+        "rajdhani/rajdhani-semibold-600.woff2",
+        "rajdhani/rajdhani-bold-700.woff2"
+      ],
+      "weights": [400, 500, 600, 700]
+    },
+    "Rubik": {
+      "version": "v31",
+      "files": ["rubik/rubik-latin.woff2"],
+      "weights": [400, 500, 600, 700]
+    }
+  },
+  "license": "SIL Open Font License 1.1 ; une copie est conservée dans chaque dossier de police."
+}
