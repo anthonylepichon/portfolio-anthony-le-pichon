@@ -1,0 +1,78 @@
+{
+  "meta": {
+    "description": "Données utilisées pour afficher et filtrer les projets du portfolio.",
+    "defaultImage": "../assets/images/projects/projet-generique.webp"
+  },
+  "filters": [
+    {
+      "id": "all",
+      "label": "Tout"
+    },
+    {
+      "id": "webdev-windev",
+      "label": "WEBDEV/WINDEV"
+    },
+    {
+      "id": "react-vuejs",
+      "label": "React/Vue.js"
+    },
+    {
+      "id": "mobile-apps",
+      "label": "Applications mobiles"
+    },
+    {
+      "id": "full-stack",
+      "label": "Full Stack"
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "Plateforme e-learning",
+      "categoryId": "react-vuejs",
+      "categoryLabel": "React/Vue.js",
+      "description": "Plateforme de formation en ligne avec React et Node.js : gestion de parcours, vidéos interactives, quiz et suivi de progression pour entreprises.",
+      "featured": false
+    },
+    {
+      "id": 2,
+      "title": "Application mobile gestion terrain",
+      "categoryId": "mobile-apps",
+      "categoryLabel": "Applications mobiles",
+      "description": "Application WINDEV Mobile pour techniciens terrain : interventions, photos géolocalisées, rapports numériques et synchronisation offline/online.",
+      "featured": false
+    },
+    {
+      "id": 3,
+      "title": "Système de contrôle d’accès",
+      "categoryId": "full-stack",
+      "categoryLabel": "Full Stack",
+      "description": "Solution complète de gestion d’accès biométrique avec interface web React, API Node.js et application mobile pour sites sensibles.",
+      "featured": false
+    },
+    {
+      "id": 4,
+      "title": "Plateforme de gestion énergétique",
+      "categoryId": "webdev-windev",
+      "categoryLabel": "WEBDEV/WINDEV",
+      "description": "Application web WEBDEV avec tableau de bord analytique pour le suivi de consommation énergétique et l’optimisation des coûts pour de grands groupes.",
+      "featured": true
+    },
+    {
+      "id": 5,
+      "title": "Plateforme SaaS facturation",
+      "categoryId": "full-stack",
+      "categoryLabel": "Full Stack",
+      "description": "Solution SaaS complète avec React, Node.js et MongoDB : gestion des clients, devis, factures, paiements Stripe et exports comptables automatisés.",
+      "featured": false
+    },
+    {
+      "id": 6,
+      "title": "Dashboard analytique temps réel",
+      "categoryId": "react-vuejs",
+      "categoryLabel": "React/Vue.js",
+      "description": "Interface Vue.js avec graphiques dynamiques et indicateurs en temps réel, connectée à MongoDB pour l’analyse de données métier et l’aide à la décision.",
+      "featured": true
+    }
+  ]
+}
