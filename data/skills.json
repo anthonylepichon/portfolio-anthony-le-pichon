@@ -1,0 +1,225 @@
+{
+  "meta": {
+    "description": "Compétences regroupées par catégories pour la page Compétences.",
+    "unknownLevelLabel": "À évaluer"
+  },
+  "categories": [
+    {
+      "id": "pcsoft",
+      "title": "Écosystème PCSOFT",
+      "skills": [
+        {
+          "id": "webdev",
+          "name": "WEBDEV",
+          "level": 80,
+          "icon": "../assets/images/skills/webdev.svg",
+          "highlighted": true
+        },
+        {
+          "id": "windev",
+          "name": "WINDEV",
+          "level": 70,
+          "icon": "../assets/images/skills/windev.svg",
+          "highlighted": true
+        },
+        {
+          "id": "windev-mobile",
+          "name": "WINDEV Mobile",
+          "level": 65,
+          "icon": "../assets/images/skills/windev-mobile.svg",
+          "highlighted": true
+        }
+      ]
+    },
+    {
+      "id": "programming-languages",
+      "title": "Langages de programmation",
+      "skills": [
+        {
+          "id": "wlanguage",
+          "name": "WLangage",
+          "level": 70,
+          "icon": "../assets/images/skills/wlanguage.svg",
+          "highlighted": true
+        },
+        {
+          "id": "css3",
+          "name": "CSS3",
+          "level": 55,
+          "icon": "../assets/images/skills/css3.svg",
+          "highlighted": true
+        },
+        {
+          "id": "html5",
+          "name": "HTML5",
+          "level": 55,
+          "icon": "../assets/images/skills/html5.svg",
+          "highlighted": true
+        },
+        {
+          "id": "javascript",
+          "name": "JavaScript",
+          "level": 50,
+          "icon": "../assets/images/skills/javascript.svg",
+          "highlighted": true
+        }
+      ]
+    },
+    {
+      "id": "languages-frameworks",
+      "title": "Langages & Frameworks",
+      "skills": [
+        {
+          "id": "nodejs",
+          "name": "Node.js",
+          "level": 50,
+          "icon": "../assets/images/skills/nodejs.svg",
+          "highlighted": false
+        },
+        {
+          "id": "php",
+          "name": "PHP",
+          "level": 50,
+          "icon": "../assets/images/skills/php.svg",
+          "highlighted": false
+        },
+        {
+          "id": "react",
+          "name": "React",
+          "level": 50,
+          "icon": "../assets/images/skills/react.svg",
+          "highlighted": false
+        },
+        {
+          "id": "sql",
+          "name": "SQL",
+          "level": 50,
+          "icon": "../assets/images/skills/sql.svg",
+          "highlighted": false
+        },
+        {
+          "id": "symfony",
+          "name": "Symfony",
+          "level": 50,
+          "icon": "../assets/images/skills/symfony.svg",
+          "highlighted": false
+        },
+        {
+          "id": "bootstrap",
+          "name": "Bootstrap",
+          "level": 0,
+          "icon": "../assets/images/skills/bootstrap.svg",
+          "highlighted": false
+        },
+        {
+          "id": "tailwindcss",
+          "name": "Tailwind CSS",
+          "level": 0,
+          "icon": "../assets/images/skills/tailwindcss.svg",
+          "highlighted": false
+        }
+      ]
+    },
+    {
+      "id": "databases",
+      "title": "Bases de données",
+      "skills": [
+        {
+          "id": "hfsql",
+          "name": "HFSQL",
+          "level": 70,
+          "icon": "../assets/images/skills/hfsql.svg",
+          "highlighted": true
+        },
+        {
+          "id": "mysql",
+          "name": "MySQL",
+          "level": 0,
+          "icon": "../assets/images/skills/mysql.svg",
+          "highlighted": false
+        }
+      ]
+    },
+    {
+      "id": "devops-version-control",
+      "title": "DevOps & Gestion de version",
+      "skills": [
+        {
+          "id": "git",
+          "name": "Git",
+          "level": 0,
+          "icon": "../assets/images/skills/git.svg",
+          "highlighted": false
+        },
+        {
+          "id": "github",
+          "name": "GitHub",
+          "level": 0,
+          "icon": "../assets/images/skills/github.svg",
+          "highlighted": false
+        }
+      ]
+    },
+    {
+      "id": "development-tools",
+      "title": "Outils de développement",
+      "skills": [
+        {
+          "id": "figma",
+          "name": "Figma",
+          "level": 70,
+          "icon": "../assets/images/skills/figma.svg",
+          "highlighted": true
+        },
+        {
+          "id": "vscode",
+          "name": "VS Code",
+          "level": 50,
+          "icon": "../assets/images/skills/vscode.svg",
+          "highlighted": false
+        },
+        {
+          "id": "github-copilot",
+          "name": "GitHub Copilot",
+          "level": 0,
+          "icon": "../assets/images/skills/github-copilot.svg",
+          "highlighted": false
+        },
+        {
+          "id": "codex",
+          "name": "Codex",
+          "level": null,
+          "icon": "../assets/images/skills/codex.svg",
+          "highlighted": false
+        }
+      ]
+    },
+    {
+      "id": "software-tools",
+      "title": "Logiciels & Outils",
+      "skills": [
+        {
+          "id": "notion",
+          "name": "Notion",
+          "level": 75,
+          "icon": "../assets/images/skills/notion.svg",
+          "highlighted": false
+        },
+        {
+          "id": "microsoft-teams",
+          "name": "Microsoft Teams",
+          "level": 65,
+          "icon": "../assets/images/skills/microsoft-teams.svg",
+          "highlighted": false
+        },
+        {
+          "id": "discord",
+          "name": "Discord",
+          "level": 55,
+          "icon": "../assets/images/skills/discord.svg",
+          "highlighted": false
+        }
+      ]
+    }
+  ]
+}
