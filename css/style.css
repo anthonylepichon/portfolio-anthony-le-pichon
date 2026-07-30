@@ -815,6 +815,20 @@ body {
   font-style: normal;
 }
 
+/* L'icône permet d'identifier visuellement que le numéro ouvre WhatsApp. */
+.site-footer__contact-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.site-footer__contact-link img {
+  display: block;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
 .site-footer__contact p {
   margin: 0;
 }
