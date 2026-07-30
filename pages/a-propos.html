@@ -3,17 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Le chemin commence par ../ car cette page se trouve dans le dossier pages. -->
     <link rel="icon" href="../assets/images/favicon/favicon.ico" sizes="any">
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/favicon/apple-touch-icon.png">
-    <link rel="manifest" href="../assets/images/favicon/site.webmanifest">
-    <meta name="theme-color" content="#078FA7">
+    <link rel="stylesheet" href="../css/style.css">
+    <meta name="description" content="Découvrez le parcours d'Anthony Le Pichon, développeur web junior.">
     <title>À propos | Anthony Le Pichon</title>
 </head>
 
 <body>
-    <!-- Le contenu de la page À propos sera ajouté à partir de la maquette Figma. -->
+    <!-- Ce lien apparaît au clavier et permet d'éviter toute la navigation principale. -->
+    <a class="skip-link" href="#main-content">Aller au contenu principal</a>
+
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a
+                class="site-header__brand"
+                href="../index.html"
+                aria-label="Accueil du portfolio d'Anthony Le Pichon"
+            >
+                <img
+                    class="site-header__logo"
+                    src="../assets/images/logos/logo.svg"
+                    alt=""
+                >
+                <span>Anthony <span class="site-header__surname">LE PICHON</span></span>
+            </a>
+
+            <!-- Ce bouton est visible uniquement sur tablette et mobile. -->
+            <button
+                class="site-header__menu-button"
+                type="button"
+                aria-label="Ouvrir le menu"
+                aria-controls="site-navigation"
+                aria-expanded="false"
+            >
+                <span class="site-header__menu-line"></span>
+                <span class="site-header__menu-line"></span>
+                <span class="site-header__menu-line"></span>
+            </button>
+
+            <nav id="site-navigation" class="site-navigation" aria-label="Navigation principale">
+                <ul class="site-navigation__list">
+                    <li><a class="site-navigation__link" href="../index.html">Accueil</a></li>
+                    <li><a class="site-navigation__link" href="a-propos.html" aria-current="page">À propos</a></li>
+                    <li><a class="site-navigation__link" href="competences.html">Compétences</a></li>
+                    <li><a class="site-navigation__link" href="projets.html">Projets</a></li>
+                    <li><a class="site-navigation__link" href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+        <!-- Le contenu de la page À propos sera ajouté à partir de la maquette Figma. -->
+    </main>
+
+    <!-- Le script est placé à la fin pour que le HTML soit chargé avant son exécution. -->
+    <script src="../js/header.js"></script>
 </body>
 </html>

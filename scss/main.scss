@@ -1,0 +1,7 @@
+/*
+ * Ce fichier rassemble les différentes parties SCSS du site.
+ * Il est compilé dans css/style.css, le fichier lu par le navigateur.
+ */
+@use "base/fonts";
+@use "base/global";
+@use "layout/header";
