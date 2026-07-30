@@ -1,0 +1,383 @@
+$projects-primary: rgb(7, 143, 167);
+$projects-accent: #d8894f;
+$projects-dark: #0b0b0b;
+$projects-text: #2f3437;
+$projects-light: #ffffff;
+$projects-background: #f8f3eb;
+$projects-border: #cbe5ea;
+
+/* Le même conteneur aligne le hero, les cartes et l'appel à l'action. */
+.projects-container {
+  width: calc(100% - 48px);
+  max-width: 1224px;
+  margin: 0 auto;
+}
+
+.projects-hero {
+  padding: 78px 0;
+  background-color: $projects-background;
+}
+
+.projects-hero__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 400px;
+  gap: 92px;
+  align-items: center;
+  max-width: 1024px;
+}
+
+.projects-hero__title {
+  margin: 0 0 32px;
+  color: $projects-primary;
+  font-family: "Rajdhani", Arial, sans-serif;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 1.05;
+}
+
+.projects-hero__title span {
+  display: block;
+}
+
+.projects-hero__title-accent {
+  color: $projects-accent;
+  font-size: 58px;
+}
+
+.projects-hero__description {
+  max-width: 570px;
+  margin: 0;
+  color: $projects-dark;
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.projects-hero__illustration {
+  display: flex;
+  justify-content: center;
+}
+
+.projects-hero__image {
+  display: block;
+  width: 370px;
+  max-width: 100%;
+}
+
+.projects-listing {
+  padding: 58px 0 96px;
+}
+
+.projects-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 50px;
+}
+
+.projects-filters:empty {
+  display: none;
+}
+
+.projects-filters__button {
+  min-height: 44px;
+  padding: 9px 22px;
+  color: $projects-primary;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: $projects-light;
+  border: 2px solid $projects-primary;
+  border-radius: 8px;
+}
+
+.projects-filters__button:hover,
+.projects-filters__button:focus-visible,
+.projects-filters__button.is-active {
+  color: $projects-light;
+  background-color: $projects-primary;
+}
+
+.projects-filters__button:focus-visible {
+  outline: 3px solid $projects-dark;
+  outline-offset: 3px;
+}
+
+.projects-status,
+.projects-noscript {
+  margin: 0 0 30px;
+  text-align: center;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 34px 32px;
+}
+
+.projects-card {
+  overflow: hidden;
+  background-color: $projects-light;
+  border: 1px solid $projects-border;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(11, 11, 11, 0.06);
+}
+
+.projects-card[hidden] {
+  display: none;
+}
+
+.projects-card__visual {
+  position: relative;
+}
+
+.projects-card__image {
+  display: block;
+  width: 100%;
+  height: 220px;
+  padding: 18px;
+  object-fit: contain;
+  background-color: #eef9fb;
+  border-bottom: 1px solid $projects-border;
+}
+
+.projects-card__featured {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 28px;
+  padding: 5px 11px;
+  margin: 0;
+  color: $projects-dark;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: #f3a15d;
+  border-radius: 18px;
+}
+
+.projects-card__featured img {
+  display: block;
+  width: 13px;
+  height: 13px;
+}
+
+.projects-card__content {
+  padding: 24px;
+}
+
+.projects-card__category {
+  display: inline-block;
+  padding: 5px 12px;
+  margin: 0 0 16px;
+  color: #075f70;
+  font-size: 12px;
+  font-weight: 700;
+  border: 1px solid #a9dce5;
+  border-radius: 20px;
+}
+
+.projects-card h3 {
+  min-height: 52px;
+  margin: 0 0 14px;
+  color: $projects-dark;
+  font-family: "Rajdhani", Arial, sans-serif;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.projects-card__description {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.projects-contact {
+  padding: 72px 0;
+  color: $projects-light;
+  text-align: center;
+  background-color: #075f70;
+}
+
+.projects-contact__inner {
+  max-width: 900px;
+}
+
+.projects-contact h2 {
+  margin: 0 0 24px;
+  font-family: "Rajdhani", Arial, sans-serif;
+  font-size: 38px;
+  font-weight: 700;
+}
+
+.projects-contact p {
+  margin: 0 0 28px;
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+.projects-contact__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  padding: 11px 28px;
+  color: $projects-light;
+  font-weight: 600;
+  text-decoration: none;
+  background-color: $projects-primary;
+  border: 2px solid $projects-primary;
+  border-radius: 8px;
+}
+
+.projects-contact__link:hover,
+.projects-contact__link:focus-visible {
+  color: $projects-dark;
+  background-color: $projects-light;
+  border-color: $projects-light;
+}
+
+.projects-contact__link:focus-visible {
+  outline: 3px solid $projects-light;
+  outline-offset: 3px;
+}
+
+/* Mise en page tablette */
+@media screen and (max-width: 1023px) {
+  .projects-container {
+    width: calc(100% - 80px);
+  }
+
+  .projects-hero {
+    padding: 62px 0;
+  }
+
+  .projects-hero__inner {
+    grid-template-columns: minmax(0, 1fr) 260px;
+    gap: 44px;
+  }
+
+  .projects-hero__title {
+    margin-bottom: 24px;
+    font-size: 40px;
+  }
+
+  .projects-hero__title-accent {
+    font-size: 46px;
+  }
+
+  .projects-hero__description {
+    font-size: 16px;
+  }
+
+  .projects-hero__image {
+    width: 260px;
+  }
+
+  .projects-listing {
+    padding: 50px 0 64px;
+  }
+
+  /* Les filtres ne figurent pas sur les maquettes tablette et mobile. */
+  .projects-filters {
+    display: none;
+  }
+
+  // Sur tablette et mobile, les filtres ne sont pas affichés : toutes les cartes
+  // restent donc visibles, même après un redimensionnement de la fenêtre.
+  .projects-card[hidden] {
+    display: block;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px 24px;
+  }
+
+  .projects-card__image {
+    height: 180px;
+  }
+
+  .projects-card__content {
+    padding: 20px 18px 24px;
+  }
+
+  .projects-card h3 {
+    min-height: 48px;
+    font-size: 21px;
+  }
+
+  .projects-contact {
+    padding: 56px 0;
+  }
+
+  .projects-contact h2 {
+    font-size: 31px;
+  }
+}
+
+/* Mise en page mobile */
+@media screen and (max-width: 600px) {
+  .projects-container {
+    width: calc(100% - 48px);
+  }
+
+  .projects-hero {
+    padding: 44px 0 40px;
+  }
+
+  .projects-hero__inner {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .projects-hero__title {
+    margin-bottom: 24px;
+    font-size: 35px;
+  }
+
+  .projects-hero__title-accent {
+    font-size: 41px;
+  }
+
+  .projects-hero__description {
+    font-size: 15px;
+  }
+
+  .projects-hero__image {
+    width: 245px;
+  }
+
+  .projects-listing {
+    padding: 48px 0 56px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .projects-card__image {
+    height: 190px;
+  }
+
+  .projects-card h3 {
+    min-height: 0;
+    font-size: 21px;
+  }
+
+  .projects-contact {
+    padding: 48px 0;
+  }
+
+  .projects-contact h2 {
+    font-size: 28px;
+  }
+
+  .projects-contact p {
+    font-size: 15px;
+  }
+}

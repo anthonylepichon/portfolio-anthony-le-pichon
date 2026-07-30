@@ -1,11 +1,13 @@
 /*
- * Les projets sont conservés dans un fichier JSON pour éviter de répéter les données
- * dans le HTML. Cette page affiche seulement les trois premiers projets du fichier.
+ * Le contenu principal des cartes reste dans le HTML pour être disponible sans JavaScript.
+ * Le fichier JSON sert à construire les filtres et à relier chaque projet à sa catégorie.
  */
 const projectsList = document.querySelector("#projects-list");
+const projectsFilters = document.querySelector("#projects-filters");
+const projectsStatus = document.querySelector("#projects-status");
 
-if (projectsList !== null) {
-    fetch("data/projects.json")
+if (projectsList !== null && projectsFilters !== null && projectsStatus !== null) {
+    fetch("../data/projects.json")
         .then(function (response) {
             if (!response.ok) {
                 throw new Error("Le fichier des projets n'a pas pu être chargé.");
@@ -14,73 +16,80 @@ if (projectsList !== null) {
             return response.json();
         })
         .then(function (data) {
-            displayProjects(data.projects, data.meta.defaultImage);
+            createProjectFilters(data.filters, data.projects);
+            filterProjects("all", data.projects);
         })
         .catch(function (error) {
-            projectsList.innerHTML = "";
-
-            const errorMessage = document.createElement("p");
-            errorMessage.className = "project-grid__status";
-            errorMessage.setAttribute("role", "status");
-            errorMessage.textContent = "Les projets sont temporairement indisponibles.";
-            projectsList.appendChild(errorMessage);
+            /* Les cartes restent visibles même si les filtres ne peuvent pas être créés. */
+            projectsStatus.classList.remove("visually-hidden");
+            projectsStatus.classList.add("projects-status");
+            projectsStatus.textContent = "Les filtres sont indisponibles. Tous les projets restent visibles.";
 
             console.error(error);
         });
 }
 
-function displayProjects(projects, defaultImage) {
-    projectsList.innerHTML = "";
+function createProjectFilters(filters, projects) {
+    removeChildren(projectsFilters);
 
-    const maximumProjects = 3;
-    let displayedProjects = 0;
+    for (let index = 0; index < filters.length; index++) {
+        const filter = filters[index];
+        const button = document.createElement("button");
 
-    for (let index = 0; index < projects.length; index++) {
-        if (displayedProjects < maximumProjects) {
-            const projectCard = createProjectCard(projects[index], defaultImage);
-            projectsList.appendChild(projectCard);
-            displayedProjects = displayedProjects + 1;
+        button.className = "projects-filters__button";
+        button.type = "button";
+        button.textContent = filter.label;
+        button.setAttribute("aria-pressed", "false");
+
+        if (filter.id === "all") {
+            button.classList.add("is-active");
+            button.setAttribute("aria-pressed", "true");
         }
-    }
 
-    if (displayedProjects === 0) {
-        const emptyMessage = document.createElement("p");
-        emptyMessage.className = "project-grid__status";
-        emptyMessage.setAttribute("role", "status");
-        emptyMessage.textContent = "Aucun projet n'est encore disponible.";
-        projectsList.appendChild(emptyMessage);
+        button.addEventListener("click", function () {
+            updateActiveFilter(button);
+            filterProjects(filter.id, projects);
+        });
+
+        projectsFilters.appendChild(button);
     }
 }
 
-function createProjectCard(project, defaultImage) {
-    const card = document.createElement("article");
-    card.className = "project-card";
+function updateActiveFilter(activeButton) {
+    const filterButtons = projectsFilters.querySelectorAll("button");
 
-    const image = document.createElement("img");
-    image.className = "project-card__image";
-    image.src = defaultImage;
-    image.alt = "";
-    image.loading = "lazy";
-    card.appendChild(image);
+    for (let index = 0; index < filterButtons.length; index++) {
+        filterButtons[index].classList.remove("is-active");
+        filterButtons[index].setAttribute("aria-pressed", "false");
+    }
 
-    const content = document.createElement("div");
-    content.className = "project-card__content";
+    activeButton.classList.add("is-active");
+    activeButton.setAttribute("aria-pressed", "true");
+}
 
-    const title = document.createElement("h3");
-    title.textContent = project.title;
-    content.appendChild(title);
+function filterProjects(categoryId, projects) {
+    let visibleProjects = 0;
 
-    const category = document.createElement("p");
-    category.className = "project-card__category";
-    category.textContent = project.categoryLabel;
-    content.appendChild(category);
+    for (let index = 0; index < projects.length; index++) {
+        const project = projects[index];
+        const card = document.querySelector("#project-" + project.id);
 
-    const description = document.createElement("p");
-    description.className = "project-card__description";
-    description.textContent = project.description;
-    content.appendChild(description);
+        if (card !== null) {
+            if (categoryId === "all" || project.categoryId === categoryId) {
+                card.hidden = false;
+                visibleProjects = visibleProjects + 1;
+            } else {
+                card.hidden = true;
+            }
+        }
+    }
 
-    card.appendChild(content);
+    projectsStatus.textContent = visibleProjects + " projets affichés.";
+}
 
-    return card;
+function removeChildren(element) {
+    /* Cette boucle vide le conteneur sans utiliser innerHTML. */
+    while (element.firstChild !== null) {
+        element.removeChild(element.firstChild);
+    }
 }
