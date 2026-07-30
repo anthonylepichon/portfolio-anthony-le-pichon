@@ -1,0 +1,580 @@
+$contact-primary: rgb(7, 143, 167);
+$contact-accent: #d8894f;
+$contact-dark: #0b0b0b;
+$contact-text: #2f3437;
+$contact-light: #ffffff;
+$contact-background: #f8f3eb;
+$contact-border: #cbe5ea;
+
+/* Ce conteneur conserve les mêmes marges que les autres pages du portfolio. */
+.contact-container {
+  width: calc(100% - 48px);
+  max-width: 1224px;
+  margin: 0 auto;
+}
+
+.contact-hero {
+  padding: 78px 0;
+  background-color: $contact-background;
+}
+
+.contact-hero__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 400px;
+  gap: 92px;
+  align-items: center;
+  max-width: 1024px;
+}
+
+.contact-hero__title {
+  margin: 0 0 32px;
+  color: $contact-primary;
+  font-family: "Rajdhani", Arial, sans-serif;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 1.05;
+}
+
+.contact-hero__title span {
+  display: block;
+}
+
+.contact-hero__title-accent {
+  color: $contact-accent;
+  font-size: 58px;
+}
+
+.contact-hero__description {
+  max-width: 590px;
+  margin: 0;
+  color: $contact-dark;
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.contact-hero__illustration {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-hero__image {
+  display: block;
+  width: 370px;
+  max-width: 100%;
+}
+
+.contact-content {
+  padding: 86px 0 96px;
+}
+
+.contact-content__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 2.15fr) minmax(280px, 1fr);
+  gap: 54px;
+  align-items: start;
+}
+
+.contact-form,
+.contact-card {
+  background-color: $contact-light;
+  border: 1px solid $contact-border;
+  border-radius: 8px;
+  box-shadow: 0 8px 18px rgba(11, 11, 11, 0.06);
+}
+
+.contact-form {
+  padding: 34px 32px 38px;
+}
+
+.contact-form__title {
+  margin: 0 0 8px;
+  color: $contact-primary;
+  font-family: "Rajdhani", Arial, sans-serif;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.contact-form__title span {
+  color: $contact-accent;
+}
+
+.contact-form__required {
+  margin: 0 0 26px;
+  color: $contact-text;
+  font-size: 13px;
+}
+
+.contact-form__fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px 24px;
+}
+
+.contact-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact-field--full {
+  grid-column: 1 / -1;
+}
+
+.contact-field label {
+  color: $contact-dark;
+  font-weight: 600;
+}
+
+.contact-field__optional {
+  display: block;
+  margin-top: 5px;
+  color: $contact-text;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.contact-field input,
+.contact-field select,
+.contact-field textarea {
+  width: 100%;
+  color: $contact-dark;
+  font: inherit;
+  background-color: $contact-light;
+  border: 1px solid $contact-border;
+  border-radius: 7px;
+}
+
+.contact-field input,
+.contact-field select {
+  min-height: 52px;
+  padding: 11px 14px;
+}
+
+.contact-field select {
+  cursor: pointer;
+}
+
+.contact-field textarea {
+  min-height: 178px;
+  padding: 15px 14px;
+  resize: vertical;
+}
+
+.contact-field input::placeholder,
+.contact-field textarea::placeholder {
+  color: #777f83;
+  opacity: 1;
+}
+
+.contact-field input:focus-visible,
+.contact-field select:focus-visible,
+.contact-field textarea:focus-visible {
+  outline: 3px solid $contact-primary;
+  outline-offset: 2px;
+  border-color: $contact-primary;
+}
+
+.contact-form__privacy {
+  margin: -6px 0 0;
+  color: $contact-text;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.contact-form__submit {
+  min-height: 54px;
+  padding: 12px 24px;
+  color: $contact-light;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: $contact-primary;
+  border: 2px solid $contact-primary;
+  border-radius: 7px;
+  box-shadow: 0 6px 12px rgba(7, 143, 167, 0.18);
+}
+
+.contact-form__submit:hover,
+.contact-form__submit:focus-visible {
+  color: $contact-light;
+  background-color: $contact-dark;
+  border-color: $contact-dark;
+}
+
+.contact-form__submit:focus-visible {
+  outline: 3px solid $contact-dark;
+  outline-offset: 3px;
+}
+
+.contact-sidebar {
+  display: grid;
+  gap: 24px;
+}
+
+.contact-card {
+  padding: 30px 28px;
+}
+
+.contact-card h2 {
+  margin: 0 0 25px;
+  color: $contact-dark;
+  font-family: "Rajdhani", Arial, sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.contact-information,
+.contact-benefits {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.contact-information {
+  display: grid;
+  gap: 20px;
+}
+
+.contact-information li {
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr);
+  gap: 14px;
+  align-items: center;
+}
+
+.contact-information li > span:last-child {
+  display: grid;
+  gap: 4px;
+}
+
+.contact-information__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background-color: $contact-primary;
+  border-radius: 8px;
+}
+
+.contact-information__icon img {
+  display: block;
+  width: 22px;
+  height: 22px;
+}
+
+.contact-information strong {
+  font-size: 14px;
+}
+
+.contact-information a {
+  color: $contact-text;
+  overflow-wrap: anywhere;
+  text-decoration: none;
+}
+
+.contact-information a:hover,
+.contact-information a:focus-visible {
+  color: $contact-primary;
+  text-decoration: underline;
+}
+
+.contact-card__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  margin-top: 26px;
+  color: $contact-primary;
+  font-weight: 700;
+  text-decoration: none;
+  border: 2px solid $contact-primary;
+  border-radius: 7px;
+}
+
+.contact-card__link:hover,
+.contact-card__link:focus-visible {
+  color: $contact-light;
+  background-color: $contact-dark;
+  border-color: $contact-dark;
+}
+
+.contact-card__link:focus-visible,
+.contact-information a:focus-visible {
+  outline: 3px solid $contact-dark;
+  outline-offset: 3px;
+}
+
+.contact-benefits {
+  display: grid;
+  gap: 13px;
+}
+
+.contact-benefits li {
+  display: grid;
+  grid-template-columns: 18px minmax(0, 1fr);
+  gap: 8px;
+  line-height: 1.35;
+}
+
+.contact-benefits li span {
+  color: $contact-primary;
+  font-weight: 700;
+}
+
+.contact-location {
+  padding: 80px 0 96px;
+  background-color: $contact-background;
+}
+
+.contact-location__inner {
+  text-align: center;
+}
+
+.contact-location h2 {
+  margin: 0 0 14px;
+  color: $contact-primary;
+  font-family: "Rajdhani", Arial, sans-serif;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.contact-location h2 span {
+  color: $contact-accent;
+}
+
+.contact-location__profession {
+  margin: 0 0 48px;
+  color: $contact-dark;
+  font-family: "Rajdhani", Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* Ce bloc réserve la place de la future carte sans dépendre d'un service externe. */
+.contact-map-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 480px;
+  color: $contact-text;
+  background-color: #eaf3f2;
+  background-image:
+    linear-gradient(35deg, transparent 47%, rgba(7, 143, 167, 0.13) 48%, rgba(7, 143, 167, 0.13) 51%, transparent 52%),
+    linear-gradient(-25deg, transparent 47%, rgba(216, 137, 79, 0.12) 48%, rgba(216, 137, 79, 0.12) 51%, transparent 52%);
+  background-size: 120px 95px, 155px 130px;
+  border: 1px solid $contact-border;
+  border-radius: 8px;
+}
+
+.contact-map-placeholder img {
+  display: block;
+  width: 42px;
+  height: 42px;
+  padding: 10px;
+  margin-bottom: 12px;
+  background-color: $contact-primary;
+  border-radius: 50%;
+}
+
+.contact-map-placeholder p {
+  margin: 0 0 5px;
+  color: $contact-dark;
+  font-weight: 700;
+}
+
+.contact-map-placeholder span {
+  font-size: 14px;
+}
+
+/* Mise en page tablette */
+@media screen and (max-width: 1023px) {
+  .contact-container {
+    width: calc(100% - 80px);
+  }
+
+  .contact-hero {
+    padding: 62px 0;
+  }
+
+  .contact-hero__inner {
+    grid-template-columns: minmax(0, 1fr) 260px;
+    gap: 44px;
+  }
+
+  .contact-hero__title {
+    margin-bottom: 24px;
+    font-size: 40px;
+  }
+
+  .contact-hero__title-accent {
+    font-size: 46px;
+  }
+
+  .contact-hero__description {
+    font-size: 16px;
+  }
+
+  .contact-hero__image {
+    width: 260px;
+  }
+
+  .contact-content {
+    padding: 50px 0 60px;
+  }
+
+  .contact-content__layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .contact-form {
+    padding: 28px 24px 34px;
+  }
+
+  .contact-form__title {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .contact-form__submit {
+    justify-self: center;
+    min-width: 190px;
+  }
+
+  .contact-sidebar {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+  }
+
+  .contact-card {
+    padding: 24px 22px;
+  }
+
+  .contact-information li {
+    display: block;
+  }
+
+  .contact-information__icon,
+  .contact-card__link {
+    display: none;
+  }
+
+  .contact-location {
+    padding: 58px 0 68px;
+  }
+
+  .contact-location h2 {
+    font-size: 32px;
+  }
+
+  .contact-location__profession {
+    margin-bottom: 34px;
+    font-size: 20px;
+  }
+
+  .contact-map-placeholder {
+    min-height: 265px;
+  }
+}
+
+/* Mise en page mobile */
+@media screen and (max-width: 600px) {
+  .contact-container {
+    width: calc(100% - 48px);
+  }
+
+  .contact-hero {
+    padding: 44px 0 40px;
+  }
+
+  .contact-hero__inner {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .contact-hero__title {
+    margin-bottom: 24px;
+    font-size: 35px;
+  }
+
+  .contact-hero__title-accent {
+    font-size: 41px;
+  }
+
+  .contact-hero__description {
+    font-size: 15px;
+  }
+
+  .contact-hero__image {
+    width: 245px;
+  }
+
+  .contact-content {
+    padding: 48px 0 58px;
+  }
+
+  .contact-form {
+    padding: 24px 18px 28px;
+  }
+
+  .contact-form__title {
+    font-size: 27px;
+  }
+
+  .contact-form__fields {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .contact-field--full {
+    grid-column: auto;
+  }
+
+  .contact-field input,
+  .contact-field select {
+    min-height: 50px;
+  }
+
+  .contact-field textarea {
+    min-height: 150px;
+  }
+
+  .contact-form__submit {
+    width: 100%;
+  }
+
+  .contact-sidebar {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .contact-card {
+    padding: 24px 20px;
+  }
+
+  .contact-card h2 {
+    font-size: 23px;
+  }
+
+  .contact-location {
+    padding: 50px 0 58px;
+  }
+
+  .contact-location h2 {
+    font-size: 28px;
+  }
+
+  .contact-location__profession {
+    margin-bottom: 30px;
+    font-size: 17px;
+  }
+
+  .contact-map-placeholder {
+    min-height: 225px;
+  }
+}
