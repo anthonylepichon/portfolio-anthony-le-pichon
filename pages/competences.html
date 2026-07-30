@@ -94,11 +94,11 @@
             </div>
         </section>
 
-        <section class="skills-listing" aria-labelledby="skills-listing-title">
-            <h2 id="skills-listing-title" class="visually-hidden">Liste de mes compétences techniques</h2>
-
+        <div class="skills-listing">
             <!-- JavaScript crée ici les catégories à partir de data/skills.json. -->
-            <p id="skills-status" class="skills-status" role="status">Chargement des compétences…</p>
+            <p id="skills-status" class="visually-hidden" role="status" aria-atomic="true">
+                Chargement des compétences…
+            </p>
             <div id="skills-categories" class="skills-categories"></div>
 
             <noscript>
@@ -106,7 +106,7 @@
                     JavaScript doit être activé pour afficher la liste détaillée des compétences.
                 </p>
             </noscript>
-        </section>
+        </div>
 
         <section class="home-contact" aria-labelledby="skills-contact-title">
             <div class="home-container home-contact__inner">

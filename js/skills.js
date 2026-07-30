@@ -16,12 +16,27 @@ if (skillsCategories !== null && skillsStatus !== null) {
         })
         .then(function (data) {
             displaySkillCategories(data.categories, data.meta.unknownLevelLabel);
-            skillsStatus.textContent = "";
+
+            const numberOfSkills = countSkills(data.categories);
+            skillsStatus.textContent = numberOfSkills + " compétences chargées.";
         })
         .catch(function (error) {
+            /* Le message d'erreur devient visible puisqu'il demande une action à l'utilisateur. */
+            skillsStatus.classList.remove("visually-hidden");
+            skillsStatus.classList.add("skills-status");
             skillsStatus.textContent = "Les compétences sont temporairement indisponibles.";
             console.error(error);
         });
+}
+
+function countSkills(categories) {
+    let numberOfSkills = 0;
+
+    for (let index = 0; index < categories.length; index++) {
+        numberOfSkills = numberOfSkills + categories[index].skills.length;
+    }
+
+    return numberOfSkills;
 }
 
 function displaySkillCategories(categories, unknownLevelLabel) {
