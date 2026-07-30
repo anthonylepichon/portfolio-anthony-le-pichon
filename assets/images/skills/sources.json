@@ -1,0 +1,36 @@
+{
+  "description": "Sources des icônes utilisées pour présenter les compétences du portfolio.",
+  "collections": {
+    "devicon": {
+      "url": "https://github.com/devicons/devicon",
+      "license": "MIT pour la collection ; les marques restent la propriété de leurs détenteurs"
+    },
+    "simple-icons": {
+      "url": "https://github.com/simple-icons/simple-icons",
+      "license": "CC0 pour la collection ; les marques restent la propriété de leurs détenteurs"
+    },
+    "iconify-logos": {
+      "url": "https://icon-sets.iconify.design/logos/",
+      "license": "Variable selon la marque et la collection"
+    },
+    "material-design-icons": {
+      "url": "https://icon-sets.iconify.design/mdi/",
+      "license": "Apache 2.0"
+    }
+  },
+  "specific_files": {
+    "codex.svg": {
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@15.21.0/icons/openai.svg",
+      "representation": "Logo OpenAI utilisé pour identifier la compétence Codex",
+      "note": "Aucun pictogramme Codex distinct n'a été trouvé dans les ressources publiques officielles consultées."
+    }
+  },
+  "custom_icons": [
+    "webdev.svg",
+    "windev.svg",
+    "windev-mobile.svg",
+    "wlanguage.svg",
+    "hfsql.svg"
+  ],
+  "custom_icons_note": "Pictogrammes vectoriels créés localement lorsque aucun logo SVG public fiable et adapté n'a été trouvé. Ils identifient la compétence sans prétendre être des logos officiels."
+}

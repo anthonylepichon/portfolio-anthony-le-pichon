@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title id="title">WLangage</title>
+  <rect width="128" height="128" rx="22" fill="#FFF7D6"/>
+  <rect x="20" y="18" width="88" height="74" rx="14" fill="#F2C14E"/>
+  <text x="64" y="69" text-anchor="middle" font-family="Arial, sans-serif" font-size="38" font-weight="800" fill="#513B00">WL</text>
+  <text x="64" y="111" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#6B4F00">WLANGAGE</text>
+</svg>

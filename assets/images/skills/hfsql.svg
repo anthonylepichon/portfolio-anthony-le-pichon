@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title id="title">HFSQL</title>
+  <rect width="128" height="128" rx="22" fill="#FFF6E8"/>
+  <ellipse cx="64" cy="31" rx="36" ry="15" fill="#F2C14E" stroke="#C77824" stroke-width="5"/>
+  <path d="M28 31v48c0 9 16 16 36 16s36-7 36-16V31" fill="#FFD977" stroke="#C77824" stroke-width="5"/>
+  <path d="M28 55c0 9 16 16 36 16s36-7 36-16" fill="none" stroke="#C77824" stroke-width="5"/>
+  <text x="64" y="61" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" font-weight="800" fill="#68400D">HFSQL</text>
+  <text x="64" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#9A4F22">DATABASE</text>
+</svg>

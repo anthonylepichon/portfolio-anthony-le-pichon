@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title id="title">WINDEV Mobile</title>
+  <rect width="128" height="128" rx="22" fill="#EAF8FA"/>
+  <rect x="40" y="14" width="48" height="82" rx="10" fill="#FFFFFF" stroke="#009CA6" stroke-width="6"/>
+  <path d="M54 25h20" stroke="#009CA6" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="64" cy="84" r="4" fill="#F28C45"/>
+  <text x="64" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#F28C45">WD</text>
+  <text x="64" y="113" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#006D77">MOBILE</text>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title id="title">WEBDEV</title>
+  <rect width="128" height="128" rx="22" fill="#EAF8FA"/>
+  <rect x="18" y="22" width="92" height="66" rx="10" fill="#FFFFFF" stroke="#009CA6" stroke-width="6"/>
+  <path d="M18 40h92" stroke="#009CA6" stroke-width="6"/>
+  <circle cx="29" cy="31" r="3" fill="#F28C45"/>
+  <circle cx="39" cy="31" r="3" fill="#F2C14E"/>
+  <path d="m48 53-10 10 10 10M80 53l10 10-10 10M70 49 58 77" fill="none" stroke="#F28C45" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="64" y="108" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#006D77">WEBDEV</text>
+</svg>
