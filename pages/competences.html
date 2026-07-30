@@ -7,9 +7,10 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/favicon/apple-touch-icon.png">
+    <link rel="canonical" href="https://anthonylepichon.com/pages/competences.html">
     <link rel="stylesheet" href="../css/style.css">
-    <meta name="description" content="Découvrez les compétences en développement web d'Anthony Le Pichon.">
-    <title>Compétences | Anthony Le Pichon</title>
+    <meta name="description" content="Découvrez les compétences techniques d'Anthony Le Pichon : PC SOFT, HTML, CSS, JavaScript, bases de données et outils de développement.">
+    <title>Compétences techniques | Anthony Le Pichon</title>
 </head>
 
 <body>
@@ -69,10 +70,119 @@
     </header>
 
     <main id="main-content" tabindex="-1">
-        <!-- Le contenu de la page Compétences sera ajouté à partir de la maquette Figma. -->
+        <section class="skills-hero" aria-labelledby="skills-title">
+            <div class="skills-container skills-hero__inner">
+                <div class="skills-hero__content">
+                    <h1 id="skills-title" class="skills-hero__title">
+                        <span>Mes compétences</span>
+                        <span class="skills-hero__title-accent">Techniques</span>
+                    </h1>
+                    <p class="skills-hero__description">
+                        Une double expertise technique PC SOFT (WEBDEV, WINDEV Mobile) et Full Stack
+                        moderne (React, Node.js, Symfony) pour créer des solutions digitales performantes.
+                    </p>
+                </div>
+
+                <!-- Cette illustration accompagne le texte sans ajouter d'information essentielle. -->
+                <div class="skills-hero__illustration" aria-hidden="true">
+                    <img
+                        class="skills-hero__image"
+                        src="../assets/images/illustrations/competences.svg"
+                        alt=""
+                    >
+                </div>
+            </div>
+        </section>
+
+        <section class="skills-listing" aria-labelledby="skills-listing-title">
+            <h2 id="skills-listing-title" class="visually-hidden">Liste de mes compétences techniques</h2>
+
+            <!-- JavaScript crée ici les catégories à partir de data/skills.json. -->
+            <p id="skills-status" class="skills-status" role="status">Chargement des compétences…</p>
+            <div id="skills-categories" class="skills-categories"></div>
+
+            <noscript>
+                <p class="skills-status">
+                    JavaScript doit être activé pour afficher la liste détaillée des compétences.
+                </p>
+            </noscript>
+        </section>
+
+        <section class="home-contact" aria-labelledby="skills-contact-title">
+            <div class="home-container home-contact__inner">
+                <h2 id="skills-contact-title">Travaillons ensemble sur votre prochain projet</h2>
+                <p>
+                    Vous avez un projet en tête ?<br>
+                    Discutons-en ensemble et créons quelque chose d'exceptionnel.
+                </p>
+                <a class="button button--light" href="contact.html">Contactez-moi</a>
+            </div>
+        </section>
     </main>
+
+    <footer class="site-footer">
+        <div class="home-container site-footer__inner">
+            <div class="site-footer__identity">
+                <a
+                    class="site-footer__brand"
+                    href="../index.html"
+                    aria-label="Accueil du portfolio d'Anthony Le Pichon"
+                >
+                    <img class="site-footer__logo" src="../assets/images/logos/logo.svg" alt="">
+                    <span>Anthony <span class="site-footer__surname">LE PICHON</span></span>
+                </a>
+
+                <ul class="site-footer__socials" aria-label="Réseaux professionnels">
+                    <li>
+                        <a
+                            href="https://www.linkedin.com/in/anthonylepichon/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Profil LinkedIn d'Anthony Le Pichon, nouvel onglet"
+                        >
+                            <img src="../assets/images/icons/linkedin.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://github.com/anthonylepichon"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Profil GitHub d'Anthony Le Pichon, nouvel onglet"
+                        >
+                            <img src="../assets/images/icons/github.svg" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <nav class="site-footer__navigation" aria-label="Navigation secondaire">
+                <ul>
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li><a href="a-propos.html">À propos</a></li>
+                    <li><a href="competences.html" aria-current="page">Compétences</a></li>
+                    <li><a href="projets.html">Projets</a></li>
+                </ul>
+            </nav>
+
+            <address class="site-footer__contact">
+                <a href="mailto:contact@anthonylepichon.com">contact@anthonylepichon.com</a>
+                <a
+                    class="site-footer__contact-link"
+                    href="https://wa.me/33682064582"
+                    aria-label="Contacter Anthony Le Pichon sur WhatsApp au 06 82 06 45 82"
+                >
+                    <img src="../assets/images/icons/whatsapp.svg" alt="">
+                    <span>+33 (0)6 82 06 45 82</span>
+                </a>
+                <p>Organisation en télétravail</p>
+                <a href="contact.html">Contact en ligne</a>
+            </address>
+        </div>
+    </footer>
 
     <!-- Le script est placé à la fin pour que le HTML soit chargé avant son exécution. -->
     <script src="../js/header.js"></script>
+    <script src="../js/skills.js"></script>
 </body>
 </html>

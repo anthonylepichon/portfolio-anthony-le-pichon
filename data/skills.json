@@ -7,6 +7,8 @@
     {
       "id": "pcsoft",
       "title": "Écosystème PCSOFT",
+      "titleStart": "Écosystème",
+      "titleAccent": "PCSOFT",
       "skills": [
         {
           "id": "webdev",
@@ -34,6 +36,8 @@
     {
       "id": "programming-languages",
       "title": "Langages de programmation",
+      "titleStart": "Langages",
+      "titleAccent": "de programmation",
       "skills": [
         {
           "id": "wlanguage",
@@ -68,6 +72,8 @@
     {
       "id": "languages-frameworks",
       "title": "Langages & Frameworks",
+      "titleStart": "Langages",
+      "titleAccent": "& Frameworks",
       "skills": [
         {
           "id": "nodejs",
@@ -123,6 +129,8 @@
     {
       "id": "databases",
       "title": "Bases de données",
+      "titleStart": "Bases",
+      "titleAccent": "de données",
       "skills": [
         {
           "id": "hfsql",
@@ -143,6 +151,8 @@
     {
       "id": "devops-version-control",
       "title": "DevOps & Gestion de version",
+      "titleStart": "DevOps",
+      "titleAccent": "& Gestion de version",
       "skills": [
         {
           "id": "git",
@@ -163,6 +173,8 @@
     {
       "id": "development-tools",
       "title": "Outils de développement",
+      "titleStart": "Outils",
+      "titleAccent": "de développement",
       "skills": [
         {
           "id": "figma",
@@ -197,6 +209,8 @@
     {
       "id": "software-tools",
       "title": "Logiciels & Outils",
+      "titleStart": "Logiciels",
+      "titleAccent": "& Outils",
       "skills": [
         {
           "id": "notion",
