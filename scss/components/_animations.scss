@@ -4,13 +4,6 @@
  * mouvements dans les réglages de leur appareil.
  */
 @media (prefers-reduced-motion: no-preference) {
-  /* Le fondu accompagne l'arrivée de la page sans déplacer son contenu principal. */
-  body {
-    animation: page-fade-in 0.22s ease-out both;
-  }
-  .motion-reveal--visible {
-    animation: section-reveal 0.55s ease-out both;
-  }
 
   .button,
   .site-navigation__cv,
@@ -46,26 +39,52 @@
   }
 }
 
-@keyframes section-reveal {
-  from {
-    opacity: 0;
-    transform: translateY(18px);
+/* Les navigateurs compatibles conservent une image de chaque page pendant la navigation.
+   Le fondu croisé évite un écran vide et n'ajoute pas de délai JavaScript. */
+@view-transition {
+  navigation: auto;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  /* Les deux instantanés sont animés ensemble : la navigation paraît continue,
+     sans masquer le contenu de la nouvelle page pendant son chargement. */
+  ::view-transition-old(root) {
+    animation: page-transition-leave 0.2s cubic-bezier(0.22, 1, 0.36, 1) both;
   }
 
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  ::view-transition-new(root) {
+    animation: page-transition-enter 0.2s cubic-bezier(0.22, 1, 0.36, 1) both;
   }
 }
 
+@keyframes page-transition-leave {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
 
-/* Une animation d'opacité évite l'effet de saut du hero à l'ouverture. */
-@keyframes page-fade-in {
+  to {
+    opacity: 0;
+    transform: scale(0.992);
+  }
+}
+
+@keyframes page-transition-enter {
   from {
     opacity: 0;
+    transform: scale(1.008);
   }
 
   to {
     opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Les visiteurs qui réduisent les mouvements gardent un changement de page instantané. */
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none;
   }
 }
