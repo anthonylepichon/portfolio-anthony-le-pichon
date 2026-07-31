@@ -60,7 +60,7 @@ $home-border: #cbe5ea;
 
 .button--primary {
   color: $home-light;
-  background-color: $home-primary;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)), $home-primary;
 }
 
 .button--secondary {
@@ -76,7 +76,7 @@ $home-border: #cbe5ea;
 .button:hover,
 .button:focus-visible {
   color: $home-light;
-  background-color: $home-hover;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0)), $home-hover;
   border-color: $home-hover;
 }
 
@@ -88,7 +88,7 @@ $home-border: #cbe5ea;
 /* Présentation principale */
 .home-hero {
   padding: 82px 0;
-  background-color: $home-background;
+  background: linear-gradient(135deg, $home-background 0%, #eef9fb 100%);
 }
 
 .home-hero__inner {
@@ -334,7 +334,7 @@ $home-border: #cbe5ea;
   padding: 78px 0;
   color: $home-light;
   text-align: center;
-  background-color: $home-primary;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(0, 0, 0, 0.08)), $home-primary;
 }
 
 .home-contact__inner {

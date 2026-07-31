@@ -23,7 +23,7 @@ $skills-level-purple: #9b51e0;
 
 .skills-hero {
   padding: 78px 0;
-  background-color: $skills-background;
+  background: linear-gradient(135deg, $skills-background 0%, #eef9fb 100%);
 }
 
 .skills-hero__inner {

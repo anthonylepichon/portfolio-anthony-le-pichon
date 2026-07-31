@@ -20,7 +20,7 @@ $contact-border: #cbe5ea;
 
 .contact-hero {
   padding: 78px 0;
-  background-color: $contact-background;
+  background: linear-gradient(135deg, $contact-background 0%, #eef9fb 100%);
 }
 
 .contact-hero__inner {
@@ -204,7 +204,7 @@ $contact-border: #cbe5ea;
   font: inherit;
   font-weight: 700;
   cursor: pointer;
-  background-color: $contact-primary;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)), $contact-primary;
   border: 2px solid $contact-primary;
   border-radius: 7px;
   box-shadow: 0 6px 12px rgba(7, 143, 167, 0.18);
@@ -213,7 +213,7 @@ $contact-border: #cbe5ea;
 .contact-form__submit:hover,
 .contact-form__submit:focus-visible {
   color: $contact-light;
-  background-color: $contact-hover;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0)), $contact-hover;
   border-color: $contact-hover;
 }
 
@@ -313,7 +313,7 @@ $contact-border: #cbe5ea;
 .contact-card__link--primary {
   gap: 8px;
   color: $contact-light;
-  background-color: $contact-primary;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)), $contact-primary;
 }
 
 .contact-card__whatsapp-icon {
@@ -327,7 +327,7 @@ $contact-border: #cbe5ea;
 .contact-card__link:hover,
 .contact-card__link:focus-visible {
   color: $contact-light;
-  background-color: $contact-hover;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0)), $contact-hover;
   border-color: $contact-hover;
 }
 
@@ -356,7 +356,7 @@ $contact-border: #cbe5ea;
 
 .contact-location {
   padding: 80px 0 96px;
-  background-color: $contact-background;
+  background: linear-gradient(135deg, #eef9fb 0%, $contact-background 100%);
 }
 
 .contact-location__inner {

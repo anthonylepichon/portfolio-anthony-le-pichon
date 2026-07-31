@@ -22,7 +22,7 @@ $about-experience-border: #f1d0b5;
 
 .about-hero {
   padding: 78px 0;
-  background-color: $about-background;
+  background: linear-gradient(135deg, $about-background 0%, #eef9fb 100%);
 }
 
 .about-hero__inner {

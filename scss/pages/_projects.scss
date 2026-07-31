@@ -20,7 +20,7 @@ $projects-border: #cbe5ea;
 
 .projects-hero {
   padding: 78px 0;
-  background-color: $projects-background;
+  background: linear-gradient(135deg, $projects-background 0%, #eef9fb 100%);
 }
 
 .projects-hero__inner {
@@ -228,7 +228,7 @@ $projects-border: #cbe5ea;
   padding: 72px 0;
   color: $projects-light;
   text-align: center;
-  background-color: $projects-primary;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(0, 0, 0, 0.08)), $projects-primary;
 }
 
 .projects-contact__inner {
