@@ -27,8 +27,3 @@ body {
   white-space: nowrap;
   border: 0;
 }
-
-/* Le contenu principal reçoit un nom unique afin de pouvoir être animé sans inclure le header. */
-main {
-  view-transition-name: page-content;
-}
