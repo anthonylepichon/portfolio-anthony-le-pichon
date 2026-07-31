@@ -1,0 +1,41 @@
+/*
+ * Les animations améliorent la perception de fluidité sans déplacer la mise en page.
+ * Elles sont volontairement désactivées pour les personnes qui préfèrent réduire les
+ * mouvements dans les réglages de leur appareil.
+ */
+@media (prefers-reduced-motion: no-preference) {
+  .motion-reveal--visible {
+    animation: section-reveal 0.55s ease-out both;
+  }
+
+  .button,
+  .project-card,
+  .projects-card,
+  .skill-card,
+  .timeline-card,
+  .contact-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .button:hover,
+  .project-card:hover,
+  .projects-card:hover,
+  .skill-card:hover,
+  .timeline-card:hover,
+  .contact-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 22px rgba(11, 11, 11, 0.12);
+  }
+}
+
+@keyframes section-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
