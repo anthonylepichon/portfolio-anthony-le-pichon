@@ -24,6 +24,7 @@ function updateActiveButton(activeButton) {
 }
 
 function showAllEntries() {
+    /* Toutes les entrées reprennent leur place dans la frise lorsqu'aucun filtre n'est appliqué. */
     for (let index = 0; index < timelineEntries.length; index++) {
         timelineEntries[index].hidden = false;
     }
@@ -32,6 +33,7 @@ function showAllEntries() {
 }
 
 function showEntriesByCategory(categoryClass, activeButton) {
+    /* La classe reçue correspond aux catégories déjà écrites dans le HTML : formation ou expérience. */
     for (let index = 0; index < timelineEntries.length; index++) {
         if (timelineEntries[index].classList.contains(categoryClass)) {
             timelineEntries[index].hidden = false;

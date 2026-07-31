@@ -1,6 +1,7 @@
 /*
  * Le même header est écrit dans chaque page HTML.
  * Ce fichier unique conserve néanmoins tous ses styles au même endroit.
+ * Les classes is-open sont ajoutées et retirées seulement par js/header.js sur tablette et mobile.
  */
 
 /*
@@ -177,7 +178,7 @@
   outline-offset: 3px;
 }
 
-/* À partir de la tablette, le bouton remplace la navigation horizontale. */
+/* À partir de la tablette, le bouton remplace la navigation horizontale pour éviter qu'elle manque d'espace. */
 @media screen and (max-width: 1023px) {
   .site-header__inner {
     width: 100%;
@@ -213,6 +214,7 @@
     box-shadow: 0 8px 18px rgba(11, 11, 11, 0.08);
   }
 
+  /* Cette classe est posée par JavaScript après un clic sur le bouton du menu. */
   .site-navigation.is-open {
     display: block;
   }

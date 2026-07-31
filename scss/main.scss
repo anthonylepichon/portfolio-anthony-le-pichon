@@ -1,6 +1,7 @@
 /*
  * Ce fichier rassemble les différentes parties SCSS du site.
  * Il est compilé dans css/style.css, le fichier lu par le navigateur.
+ * L'ordre des imports est volontaire : la base est chargée avant les styles propres aux pages.
  */
 @use "base/fonts";
 @use "base/global";

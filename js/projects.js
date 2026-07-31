@@ -1,12 +1,14 @@
 /*
  * Le fichier JSON est l'unique source des projets.
  * Pour ajouter ou modifier une carte, il suffit donc de modifier projects.json.
+ * Le HTML contient seulement des conteneurs vides : le script les remplit après le chargement.
  */
 const projectsList = document.querySelector("#projects-list");
 const projectsFilters = document.querySelector("#projects-filters");
 const projectsStatus = document.querySelector("#projects-status");
 
 if (projectsList !== null && projectsFilters !== null && projectsStatus !== null) {
+    /* fetch lit le fichier local ; cette étape doit être testée depuis un serveur local ou OVH. */
     fetch("../data/projects.json")
         .then(function (response) {
             if (!response.ok) {
@@ -16,6 +18,7 @@ if (projectsList !== null && projectsFilters !== null && projectsStatus !== null
             return response.json();
         })
         .then(function (data) {
+            /* Les cartes et les filtres utilisent les mêmes données pour rester toujours cohérents. */
             createProjectCards(data.projects, data.meta.defaultImage, data.meta.featuredIcon);
             createProjectFilters(data.filters, data.projects);
             filterProjects("all", data.projects);
@@ -31,6 +34,7 @@ if (projectsList !== null && projectsFilters !== null && projectsStatus !== null
 }
 
 function createProjectCards(projects, defaultImage, featuredIcon) {
+    /* Vider la grille évite de dupliquer les cartes si la fonction est réutilisée plus tard. */
     removeChildren(projectsList);
 
     for (let index = 0; index < projects.length; index++) {
@@ -49,17 +53,19 @@ function createProjectCards(projects, defaultImage, featuredIcon) {
         visual.className = "projects-card__visual";
 
         if (project.featured === true) {
+            /* featured: true affiche uniquement la pastille jaune avec son étoile noire. */
             const featured = document.createElement("p");
             const featuredImage = document.createElement("img");
 
             featured.className = "projects-card__featured";
             featuredImage.src = featuredIcon;
-            featuredImage.alt = "Projet à la une";
+            featuredImage.alt = "";
 
             featured.appendChild(featuredImage);
             visual.appendChild(featured);
         }
 
+        /* L'image générique reste visible tant qu'une image de projet n'a pas été ajoutée au JSON. */
         if (project.image !== undefined && project.image !== "") {
             imageSource = project.image;
         }
@@ -75,6 +81,7 @@ function createProjectCards(projects, defaultImage, featuredIcon) {
 
         content.className = "projects-card__content";
         category.className = "projects-card__category";
+        /* textContent affiche les données comme du texte, sans interpréter de code HTML. */
         category.textContent = project.categoryLabel;
         title.textContent = project.title;
         description.className = "projects-card__description";
@@ -91,6 +98,7 @@ function createProjectCards(projects, defaultImage, featuredIcon) {
 }
 
 function createProjectFilters(filters, projects) {
+    /* Chaque bouton transmet l'identifiant de sa catégorie à la fonction de filtrage. */
     removeChildren(projectsFilters);
 
     for (let index = 0; index < filters.length; index++) {
@@ -117,6 +125,7 @@ function createProjectFilters(filters, projects) {
 }
 
 function updateActiveFilter(activeButton) {
+    /* aria-pressed annonce quelle catégorie est active aux technologies d'assistance. */
     const filterButtons = projectsFilters.querySelectorAll("button");
 
     for (let index = 0; index < filterButtons.length; index++) {
@@ -129,6 +138,7 @@ function updateActiveFilter(activeButton) {
 }
 
 function filterProjects(categoryId, projects) {
+    /* hidden retire visuellement et sémantiquement les cartes qui ne correspondent pas au filtre. */
     let visibleProjects = 0;
 
     for (let index = 0; index < projects.length; index++) {
@@ -149,7 +159,7 @@ function filterProjects(categoryId, projects) {
 }
 
 function removeChildren(element) {
-    /* Cette boucle vide le conteneur sans utiliser innerHTML. */
+    /* Cette boucle vide le conteneur sans utiliser innerHTML, ce qui préserve une manipulation explicite du DOM. */
     while (element.firstChild !== null) {
         element.removeChild(element.firstChild);
     }

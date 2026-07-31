@@ -1,11 +1,13 @@
 /*
  * Les compétences sont conservées dans un fichier JSON afin que leur nom,
  * leur niveau et leur icône soient modifiés à un seul endroit.
+ * La page HTML garde uniquement le conteneur : JavaScript construit les catégories et les cartes.
  */
 const skillsCategories = document.querySelector("#skills-categories");
 const skillsStatus = document.querySelector("#skills-status");
 
 if (skillsCategories !== null && skillsStatus !== null) {
+    /* La requête fonctionne depuis Live Server ou depuis l'hébergement, pas en ouvrant directement le fichier HTML. */
     fetch("../data/skills.json")
         .then(function (response) {
             if (!response.ok) {
@@ -15,6 +17,7 @@ if (skillsCategories !== null && skillsStatus !== null) {
             return response.json();
         })
         .then(function (data) {
+            /* Le même JSON fournit les cartes et le nombre annoncé après leur chargement. */
             displaySkillCategories(data.categories, data.meta.unknownLevelLabel);
 
             const numberOfSkills = countSkills(data.categories);
@@ -30,6 +33,7 @@ if (skillsCategories !== null && skillsStatus !== null) {
 }
 
 function countSkills(categories) {
+    /* Le compteur parcourt chaque catégorie pour annoncer un total exact sans le recopier en HTML. */
     let numberOfSkills = 0;
 
     for (let index = 0; index < categories.length; index++) {
@@ -40,7 +44,7 @@ function countSkills(categories) {
 }
 
 function displaySkillCategories(categories, unknownLevelLabel) {
-    /* Cette boucle évite innerHTML et retire proprement l'ancien contenu. */
+    /* Cette boucle évite innerHTML et retire proprement l'ancien contenu avant de construire les cartes. */
     while (skillsCategories.firstChild !== null) {
         skillsCategories.removeChild(skillsCategories.firstChild);
     }
@@ -52,6 +56,7 @@ function displaySkillCategories(categories, unknownLevelLabel) {
 }
 
 function createSkillCategory(category, unknownLevelLabel) {
+    /* Chaque catégorie est une section nommée : sa relation avec son titre est indiquée par aria-labelledby. */
     const section = document.createElement("section");
     section.className = "skills-category";
 
@@ -93,6 +98,7 @@ function createSkillCard(skill, unknownLevelLabel) {
     card.className = "skill-card";
 
     if (skill.highlighted === true) {
+        /* L'étoile est décorative ; un texte caché explique la notion de compétence principale. */
         const star = document.createElement("span");
         star.className = "skill-card__highlight";
         star.setAttribute("aria-hidden", "true");
@@ -127,6 +133,7 @@ function createSkillCard(skill, unknownLevelLabel) {
     const levelValue = document.createElement("span");
     levelValue.className = "skill-card__level-value";
 
+    /* Le niveau inconnu reçoit une information textuelle, différente d'un pourcentage. */
     if (skill.level === null) {
         level.classList.add("skill-card__level--unknown");
         level.setAttribute("aria-label", "Niveau : " + unknownLevelLabel);

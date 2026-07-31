@@ -1,3 +1,7 @@
+/*
+ * Styles propres à la page Contact : formulaire Formspree, informations et emplacement de carte future.
+ * Les couleurs sont regroupées pour rester cohérentes avec les autres pages sans style écrit dans le HTML.
+ */
 $contact-primary: rgb(7, 143, 167);
 $contact-accent: #d8894f;
 $contact-dark: #0b0b0b;
@@ -391,7 +395,7 @@ $contact-border: #cbe5ea;
   font-size: 14px;
 }
 
-/* Mise en page tablette */
+/* Sur tablette, le formulaire et les informations s'empilent pour préserver la largeur des champs. */
 @media screen and (max-width: 1023px) {
   .contact-container {
     width: calc(100% - 80px);
@@ -482,7 +486,7 @@ $contact-border: #cbe5ea;
   }
 }
 
-/* Mise en page mobile */
+/* Sur mobile, chaque champ prend toute la largeur afin de faciliter la saisie tactile. */
 @media screen and (max-width: 600px) {
   .contact-container {
     width: calc(100% - 48px);

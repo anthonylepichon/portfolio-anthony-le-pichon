@@ -1,3 +1,7 @@
+/*
+ * Styles propres à la page Compétences, dont les cartes sont générées depuis skills.json.
+ * Le SCSS décrit leur apparence sans dépendre du nombre de catégories ou de cartes présentes.
+ */
 $skills-primary: rgb(7, 143, 167);
 $skills-accent: #a95016;
 $skills-dark: #0b0b0b;
@@ -233,7 +237,7 @@ $skills-level-purple: #9b51e0;
   background: conic-gradient($skills-level-background 0deg 360deg);
 }
 
-/* Mise en page tablette */
+/* Sur tablette, la grille garde deux cartes par ligne pour conserver des icônes bien visibles. */
 @media screen and (max-width: 1023px) {
   .skills-container {
     width: calc(100% - 80px);
@@ -280,7 +284,7 @@ $skills-level-purple: #9b51e0;
   }
 }
 
-/* Mise en page mobile */
+/* Sur mobile, une seule carte par ligne évite de réduire excessivement le texte et les indicateurs de niveau. */
 @media screen and (max-width: 600px) {
   .skills-container {
     width: calc(100% - 48px);

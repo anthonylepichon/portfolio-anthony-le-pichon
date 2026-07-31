@@ -1,6 +1,7 @@
 /*
  * Ces règles posent une base commune à toutes les pages.
  * box-sizing évite que les bordures et les espacements agrandissent les éléments.
+ * Elles évitent de recopier les mêmes réglages dans chaque page.
  */
 *,
 *::before,
@@ -8,6 +9,7 @@
   box-sizing: border-box;
 }
 
+/* Le défilement fluide rend les liens internes plus agréables à suivre. */
 html {
   scroll-behavior: smooth;
 }

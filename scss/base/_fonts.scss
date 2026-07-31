@@ -1,6 +1,7 @@
 /*
  * Les polices sont enregistrées dans le projet pour que le site ne dépende
  * pas d'un service externe. Le navigateur les chargera depuis l'hébergement OVH.
+ * font-display: swap affiche d'abord une police de secours afin de ne pas masquer le texte pendant le chargement.
  */
 
 /* Inter est utilisée uniquement pour le grand titre de la page d'accueil sur ordinateur. */

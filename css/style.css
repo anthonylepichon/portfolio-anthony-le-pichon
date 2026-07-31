@@ -2,10 +2,12 @@
 /*
  * Ce fichier rassemble les différentes parties SCSS du site.
  * Il est compilé dans css/style.css, le fichier lu par le navigateur.
+ * L'ordre des imports est volontaire : la base est chargée avant les styles propres aux pages.
  */
 /*
  * Les polices sont enregistrées dans le projet pour que le site ne dépende
  * pas d'un service externe. Le navigateur les chargera depuis l'hébergement OVH.
+ * font-display: swap affiche d'abord une police de secours afin de ne pas masquer le texte pendant le chargement.
  */
 /* Inter est utilisée uniquement pour le grand titre de la page d'accueil sur ordinateur. */
 @font-face {
@@ -97,6 +99,7 @@
 /*
  * Ces règles posent une base commune à toutes les pages.
  * box-sizing évite que les bordures et les espacements agrandissent les éléments.
+ * Elles évitent de recopier les mêmes réglages dans chaque page.
  */
 *,
 *::before,
@@ -104,6 +107,7 @@
   box-sizing: border-box;
 }
 
+/* Le défilement fluide rend les liens internes plus agréables à suivre. */
 html {
   scroll-behavior: smooth;
 }
@@ -136,6 +140,7 @@ body {
 /*
  * Le même header est écrit dans chaque page HTML.
  * Ce fichier unique conserve néanmoins tous ses styles au même endroit.
+ * Les classes is-open sont ajoutées et retirées seulement par js/header.js sur tablette et mobile.
  */
 /*
  * Le lien d'évitement reste hors de l'écran pendant une navigation classique.
@@ -311,7 +316,7 @@ body {
   outline-offset: 3px;
 }
 
-/* À partir de la tablette, le bouton remplace la navigation horizontale. */
+/* À partir de la tablette, le bouton remplace la navigation horizontale pour éviter qu'elle manque d'espace. */
 @media screen and (max-width: 1023px) {
   .site-header__inner {
     width: 100%;
@@ -342,6 +347,7 @@ body {
     border-bottom: 1px solid #d1e7ec;
     box-shadow: 0 8px 18px rgba(11, 11, 11, 0.08);
   }
+  /* Cette classe est posée par JavaScript après un clic sur le bouton du menu. */
   .site-navigation.is-open {
     display: block;
   }
@@ -384,6 +390,10 @@ body {
     transition: none;
   }
 }
+/*
+ * Styles propres à la page d'accueil et au footer commun aux pages.
+ * Les variables regroupent les couleurs de la maquette afin de les modifier sans chercher chaque valeur.
+ */
 /* Ce conteneur aligne les différentes sections avec le header. */
 .home-container {
   width: calc(100% - 48px);
@@ -837,7 +847,7 @@ body {
   outline-offset: 3px;
 }
 
-/* Mise en page tablette */
+/* Sur tablette, les colonnes se resserrent et la grille de projets passe de trois à deux cartes. */
 @media screen and (max-width: 1023px) {
   .home-container {
     width: calc(100% - 80px);
@@ -900,7 +910,7 @@ body {
     line-height: 27px;
   }
 }
-/* Mise en page mobile */
+/* Sur mobile, les éléments s'empilent pour conserver des textes et des zones cliquables confortables. */
 @media screen and (max-width: 600px) {
   .home-container {
     width: calc(100% - 48px);
@@ -1001,6 +1011,10 @@ body {
     overflow-wrap: anywhere;
   }
 }
+/*
+ * Styles propres à la page À propos : hero, filtres et frise chronologique.
+ * Les couleurs distinguant formations et expériences restent regroupées pour faciliter leur maintenance.
+ */
 /* Le même conteneur aligne le hero et la frise avec les marges de la maquette. */
 .about-container {
   width: calc(100% - 48px);
@@ -1247,6 +1261,7 @@ body {
     padding: 58px 0 80px;
   }
   .timeline-filters {
+    /* La maquette tablette ne prévoit pas les filtres ; la frise complète reste donc accessible. */
     display: none;
   }
   .timeline-entry {
@@ -1332,6 +1347,10 @@ body {
     font-size: 14px;
   }
 }
+/*
+ * Styles propres à la page Compétences, dont les cartes sont générées depuis skills.json.
+ * Le SCSS décrit leur apparence sans dépendre du nombre de catégories ou de cartes présentes.
+ */
 /* Ce conteneur aligne les cartes sur la même largeur que les autres pages. */
 .skills-container {
   width: calc(100% - 48px);
@@ -1555,7 +1574,7 @@ body {
   background: conic-gradient(#e8f4f7 0deg 360deg);
 }
 
-/* Mise en page tablette */
+/* Sur tablette, la grille garde deux cartes par ligne pour conserver des icônes bien visibles. */
 @media screen and (max-width: 1023px) {
   .skills-container {
     width: calc(100% - 80px);
@@ -1592,7 +1611,7 @@ body {
     gap: 24px;
   }
 }
-/* Mise en page mobile */
+/* Sur mobile, une seule carte par ligne évite de réduire excessivement le texte et les indicateurs de niveau. */
 @media screen and (max-width: 600px) {
   .skills-container {
     width: calc(100% - 48px);
@@ -1650,6 +1669,10 @@ body {
     height: 38px;
   }
 }
+/*
+ * Styles propres à la page Contact : formulaire Formspree, informations et emplacement de carte future.
+ * Les couleurs sont regroupées pour rester cohérentes avec les autres pages sans style écrit dans le HTML.
+ */
 /* Ce conteneur conserve les mêmes marges que les autres pages du portfolio. */
 .contact-container {
   width: calc(100% - 48px);
@@ -2033,7 +2056,7 @@ body {
   font-size: 14px;
 }
 
-/* Mise en page tablette */
+/* Sur tablette, le formulaire et les informations s'empilent pour préserver la largeur des champs. */
 @media screen and (max-width: 1023px) {
   .contact-container {
     width: calc(100% - 80px);
@@ -2104,7 +2127,7 @@ body {
     min-height: 265px;
   }
 }
-/* Mise en page mobile */
+/* Sur mobile, chaque champ prend toute la largeur afin de faciliter la saisie tactile. */
 @media screen and (max-width: 600px) {
   .contact-container {
     width: calc(100% - 48px);
@@ -2179,6 +2202,10 @@ body {
     min-height: 225px;
   }
 }
+/*
+ * Styles propres à la page Projets : filtres et cartes créées depuis projects.json.
+ * Le rendu reste identique quel que soit le nombre de projets ajouté dans le fichier de données.
+ */
 /* Le même conteneur aligne le hero, les cartes et l'appel à l'action. */
 .projects-container {
   width: calc(100% - 48px);
@@ -2442,7 +2469,7 @@ body {
   outline-offset: 3px;
 }
 
-/* Mise en page tablette */
+/* Sur tablette, les filtres sont masqués comme sur la maquette et toutes les cartes restent visibles. */
 @media screen and (max-width: 1023px) {
   .projects-container {
     width: calc(100% - 80px);
@@ -2474,6 +2501,7 @@ body {
   .projects-filters {
     display: none;
   }
+  /* Les filtres étant masqués, cette règle garantit que toutes les cartes restent visibles après un redimensionnement. */
   .projects-card[hidden] {
     display: block;
   }
@@ -2498,7 +2526,7 @@ body {
     font-size: 31px;
   }
 }
-/* Mise en page mobile */
+/* Sur mobile, la grille passe à une colonne pour laisser suffisamment de place au contenu de chaque carte. */
 @media screen and (max-width: 600px) {
   .projects-container {
     width: calc(100% - 48px);
