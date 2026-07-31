@@ -3,6 +3,7 @@
  * Les variables regroupent les couleurs de la maquette afin de les modifier sans chercher chaque valeur.
  */
 $home-primary: rgb(7, 143, 167);
+$home-hover: #056f82;
 $home-accent: #a95016;
 $home-text: #2f3437;
 $home-dark: #0b0b0b;
@@ -75,8 +76,8 @@ $home-border: #cbe5ea;
 .button:hover,
 .button:focus-visible {
   color: $home-light;
-  background-color: $home-dark;
-  border-color: $home-dark;
+  background-color: $home-hover;
+  border-color: $home-hover;
 }
 
 .button:focus-visible {
