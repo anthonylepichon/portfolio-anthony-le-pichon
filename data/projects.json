@@ -1,7 +1,8 @@
 {
   "meta": {
     "description": "Données utilisées pour afficher et filtrer les projets du portfolio.",
-    "defaultImage": "/assets/images/illustrations/projets.svg"
+    "defaultImage": "/assets/images/illustrations/projets.svg",
+    "featuredIcon": "/assets/images/icons/featured.svg"
   },
   "filters": [
     {
@@ -32,6 +33,8 @@
       "categoryId": "react-vuejs",
       "categoryLabel": "React/Vue.js",
       "description": "Plateforme de formation en ligne avec React et Node.js : gestion de parcours, vidéos interactives, quiz et suivi de progression pour entreprises.",
+      "image": "/assets/images/illustrations/projets.svg",
+      "imageAlt": "",
       "featured": false
     },
     {
@@ -40,6 +43,8 @@
       "categoryId": "mobile-apps",
       "categoryLabel": "Applications mobiles",
       "description": "Application WINDEV Mobile pour techniciens terrain : interventions, photos géolocalisées, rapports numériques et synchronisation offline/online.",
+      "image": "/assets/images/illustrations/projets.svg",
+      "imageAlt": "",
       "featured": false
     },
     {
@@ -48,6 +53,8 @@
       "categoryId": "full-stack",
       "categoryLabel": "Full Stack",
       "description": "Solution complète de gestion d’accès biométrique avec interface web React, API Node.js et application mobile pour sites sensibles.",
+      "image": "/assets/images/illustrations/projets.svg",
+      "imageAlt": "",
       "featured": false
     },
     {
@@ -56,6 +63,8 @@
       "categoryId": "webdev-windev",
       "categoryLabel": "WEBDEV/WINDEV",
       "description": "Application web WEBDEV avec tableau de bord analytique pour le suivi de consommation énergétique et l’optimisation des coûts pour de grands groupes.",
+      "image": "/assets/images/illustrations/projets.svg",
+      "imageAlt": "",
       "featured": true
     },
     {
@@ -64,6 +73,8 @@
       "categoryId": "full-stack",
       "categoryLabel": "Full Stack",
       "description": "Solution SaaS complète avec React, Node.js et MongoDB : gestion des clients, devis, factures, paiements Stripe et exports comptables automatisés.",
+      "image": "/assets/images/illustrations/projets.svg",
+      "imageAlt": "",
       "featured": false
     },
     {
@@ -72,6 +83,8 @@
       "categoryId": "react-vuejs",
       "categoryLabel": "React/Vue.js",
       "description": "Interface Vue.js avec graphiques dynamiques et indicateurs en temps réel, connectée à MongoDB pour l’analyse de données métier et l’aide à la décision.",
+      "image": "/assets/images/illustrations/projets.svg",
+      "imageAlt": "",
       "featured": true
     }
   ]

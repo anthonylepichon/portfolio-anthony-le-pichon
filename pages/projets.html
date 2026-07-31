@@ -123,133 +123,15 @@
                 ></div>
 
                 <p id="projects-status" class="visually-hidden" role="status" aria-atomic="true">
-                    Chargement des filtres…
+                    Chargement des projets…
                 </p>
 
-                <!--
-                    Les cartes restent dans le HTML pour le SEO et l'accessibilité.
-                    Le JavaScript les masque seulement lorsqu'un filtre est choisi.
-                -->
-                <div id="projects-list" class="projects-grid">
-                    <article id="project-1" class="projects-card">
-                        <img
-                            class="projects-card__image"
-                            src="../assets/images/illustrations/projets.svg"
-                            alt=""
-                            loading="lazy"
-                        >
-                        <div class="projects-card__content">
-                            <p class="projects-card__category">React/Vue.js</p>
-                            <h3>Plateforme e-learning</h3>
-                            <p class="projects-card__description">
-                                Plateforme de formation en ligne avec React et Node.js : gestion de parcours,
-                                vidéos interactives, quiz et suivi de progression pour entreprises.
-                            </p>
-                        </div>
-                    </article>
-
-                    <article id="project-2" class="projects-card">
-                        <img
-                            class="projects-card__image"
-                            src="../assets/images/illustrations/projets.svg"
-                            alt=""
-                            loading="lazy"
-                        >
-                        <div class="projects-card__content">
-                            <p class="projects-card__category">Applications mobiles</p>
-                            <h3>Application mobile gestion terrain</h3>
-                            <p class="projects-card__description">
-                                Application WINDEV Mobile pour techniciens terrain : interventions, photos
-                                géolocalisées, rapports numériques et synchronisation offline/online.
-                            </p>
-                        </div>
-                    </article>
-
-                    <article id="project-3" class="projects-card">
-                        <img
-                            class="projects-card__image"
-                            src="../assets/images/illustrations/projets.svg"
-                            alt=""
-                            loading="lazy"
-                        >
-                        <div class="projects-card__content">
-                            <p class="projects-card__category">Full Stack</p>
-                            <h3>Système de contrôle d’accès</h3>
-                            <p class="projects-card__description">
-                                Solution complète de gestion d’accès biométrique avec interface web React,
-                                API Node.js et application mobile pour sites sensibles.
-                            </p>
-                        </div>
-                    </article>
-
-                    <article id="project-4" class="projects-card">
-                        <div class="projects-card__visual">
-                            <p class="projects-card__featured">
-                                <img src="../assets/images/icons/featured.svg" alt="">
-                                <span>À la une</span>
-                            </p>
-                            <img
-                                class="projects-card__image"
-                                src="../assets/images/illustrations/projets.svg"
-                                alt=""
-                                loading="lazy"
-                            >
-                        </div>
-                        <div class="projects-card__content">
-                            <p class="projects-card__category">WEBDEV/WINDEV</p>
-                            <h3>Plateforme de gestion énergétique</h3>
-                            <p class="projects-card__description">
-                                Application web WEBDEV avec tableau de bord analytique pour le suivi de
-                                consommation énergétique et l’optimisation des coûts pour de grands groupes.
-                            </p>
-                        </div>
-                    </article>
-
-                    <article id="project-5" class="projects-card">
-                        <img
-                            class="projects-card__image"
-                            src="../assets/images/illustrations/projets.svg"
-                            alt=""
-                            loading="lazy"
-                        >
-                        <div class="projects-card__content">
-                            <p class="projects-card__category">Full Stack</p>
-                            <h3>Plateforme SaaS facturation</h3>
-                            <p class="projects-card__description">
-                                Solution SaaS complète avec React, Node.js et MongoDB : gestion des clients,
-                                devis, factures, paiements Stripe et exports comptables automatisés.
-                            </p>
-                        </div>
-                    </article>
-
-                    <article id="project-6" class="projects-card">
-                        <div class="projects-card__visual">
-                            <p class="projects-card__featured">
-                                <img src="../assets/images/icons/featured.svg" alt="">
-                                <span>À la une</span>
-                            </p>
-                            <img
-                                class="projects-card__image"
-                                src="../assets/images/illustrations/projets.svg"
-                                alt=""
-                                loading="lazy"
-                            >
-                        </div>
-                        <div class="projects-card__content">
-                            <p class="projects-card__category">React/Vue.js</p>
-                            <h3>Dashboard analytique temps réel</h3>
-                            <p class="projects-card__description">
-                                Interface Vue.js avec graphiques dynamiques et indicateurs en temps réel,
-                                connectée à MongoDB pour l’analyse de données métier et l’aide à la décision.
-                            </p>
-                        </div>
-                    </article>
-                </div>
+                <!-- JavaScript crée toutes les cartes à partir du fichier projects.json. -->
+                <div id="projects-list" class="projects-grid"></div>
 
                 <noscript>
                     <p class="projects-noscript">
-                        JavaScript doit être activé uniquement pour utiliser les filtres.
-                        Tous les projets restent disponibles ci-dessus.
+                        JavaScript doit être activé pour afficher et filtrer les projets.
                     </p>
                 </noscript>
             </div>

@@ -180,24 +180,13 @@ $projects-border: #cbe5ea;
   top: 14px;
   left: 14px;
   z-index: 1;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  min-height: 28px;
-  padding: 5px 11px;
   margin: 0;
-  color: $projects-dark;
-  font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
-  background-color: #f3a15d;
-  border-radius: 18px;
 }
 
 .projects-card__featured img {
   display: block;
-  width: 13px;
-  height: 13px;
+  width: 32px;
+  height: 32px;
 }
 
 .projects-card__content {
