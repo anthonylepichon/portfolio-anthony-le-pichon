@@ -1,5 +1,5 @@
 /*
- * Toutes les sections du contenu apparaissent au moment où elles entrent dans la zone visible.
+ * Les sections situées après le hero apparaissent au moment où elles entrent dans la zone visible.
  * Le header n'est jamais ciblé.
  */
 (function () {
@@ -7,7 +7,7 @@
         return;
     }
 
-    const sections = document.querySelectorAll("main > section");
+    const sections = document.querySelectorAll("main > section:not(:first-child)");
 
     if (sections.length === 0) {
         return;
@@ -27,8 +27,10 @@
     const observer = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
             if (entry.isIntersecting) {
-                entry.target.classList.add("is-visible");
                 observer.unobserve(entry.target);
+                window.setTimeout(function () {
+                    entry.target.classList.add("is-visible");
+                }, 120);
             }
         });
     }, { threshold: 0.12 });
