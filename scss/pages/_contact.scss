@@ -298,6 +298,21 @@ $contact-border: #cbe5ea;
   border-radius: 7px;
 }
 
+/* Le bouton WhatsApp est visuellement prioritaire sans changer la couleur de référence du site. */
+.contact-card__link--primary {
+  gap: 8px;
+  color: $contact-light;
+  background-color: $contact-primary;
+}
+
+.contact-card__whatsapp-icon {
+  display: block;
+  width: 18px;
+  height: 18px;
+  /* L'icône source est bleue : ce filtre la rend blanche sur le fond bleu du bouton. */
+  filter: brightness(0) invert(1);
+}
+
 .contact-card__link:hover,
 .contact-card__link:focus-visible {
   color: $contact-light;
