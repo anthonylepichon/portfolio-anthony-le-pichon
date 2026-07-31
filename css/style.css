@@ -819,6 +819,7 @@ body {
 .site-footer__legal ul {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 10px 24px;
   padding-top: 24px;
   border-top: 1px solid #cfd8dc;
@@ -1034,6 +1035,7 @@ body {
   .site-footer__legal ul {
     display: grid;
     gap: 10px;
+    justify-items: center;
   }
   .site-footer__brand {
     font-size: 18px;
