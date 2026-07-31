@@ -52,6 +52,41 @@ $projects-border: #cbe5ea;
   line-height: 1.55;
 }
 
+/* Le bouton reprend exactement le bleu du logo et des éléments principaux. */
+.projects-hero__github {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 46px;
+  padding: 10px 22px;
+  margin-top: 28px;
+  color: $projects-light;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  background-color: $projects-primary;
+  border: 2px solid $projects-primary;
+  border-radius: 8px;
+}
+
+.projects-hero__github-icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.projects-hero__github:hover,
+.projects-hero__github:focus-visible {
+  background-color: $projects-dark;
+  border-color: $projects-dark;
+}
+
+.projects-hero__github:focus-visible {
+  outline: 3px solid $projects-primary;
+  outline-offset: 3px;
+}
+
 .projects-hero__illustration {
   display: flex;
   justify-content: center;
@@ -199,7 +234,7 @@ $projects-border: #cbe5ea;
   padding: 72px 0;
   color: $projects-light;
   text-align: center;
-  background-color: #075f70;
+  background-color: $projects-primary;
 }
 
 .projects-contact__inner {
@@ -228,20 +263,20 @@ $projects-border: #cbe5ea;
   color: $projects-light;
   font-weight: 600;
   text-decoration: none;
-  background-color: $projects-primary;
-  border: 2px solid $projects-primary;
+  background-color: rgba(255, 255, 255, 0.12);
+  border: 2px solid $projects-light;
   border-radius: 8px;
 }
 
 .projects-contact__link:hover,
 .projects-contact__link:focus-visible {
-  color: $projects-dark;
-  background-color: $projects-light;
-  border-color: $projects-light;
+  color: $projects-light;
+  background-color: $projects-dark;
+  border-color: $projects-dark;
 }
 
 .projects-contact__link:focus-visible {
-  outline: 3px solid $projects-light;
+  outline: 3px solid $projects-dark;
   outline-offset: 3px;
 }
 
