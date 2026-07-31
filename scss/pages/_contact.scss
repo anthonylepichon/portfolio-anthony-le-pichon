@@ -1,5 +1,5 @@
 /*
- * Styles propres à la page Contact : formulaire Formspree, informations et emplacement de carte future.
+ * Styles propres à la page Contact : formulaire Formspree, informations et illustration de localisation.
  * Les couleurs sont regroupées pour rester cohérentes avec les autres pages sans style écrit dans le HTML.
  */
 $contact-primary: rgb(7, 143, 167);
@@ -358,41 +358,15 @@ $contact-border: #cbe5ea;
   font-weight: 700;
 }
 
-/* Ce bloc réserve la place de la future carte sans dépendre d'un service externe. */
-.contact-map-placeholder {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 480px;
-  color: $contact-text;
-  background-color: #eaf3f2;
-  background-image:
-    linear-gradient(35deg, transparent 47%, rgba(7, 143, 167, 0.13) 48%, rgba(7, 143, 167, 0.13) 51%, transparent 52%),
-    linear-gradient(-25deg, transparent 47%, rgba(216, 137, 79, 0.12) 48%, rgba(216, 137, 79, 0.12) 51%, transparent 52%);
-  background-size: 120px 95px, 155px 130px;
+/* L'image conserve le style doux de la maquette tout en restant légère et sans dépendance externe. */
+.contact-map {
+  display: block;
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
   border: 1px solid $contact-border;
   border-radius: 8px;
-}
-
-.contact-map-placeholder img {
-  display: block;
-  width: 42px;
-  height: 42px;
-  padding: 10px;
-  margin-bottom: 12px;
-  background-color: $contact-primary;
-  border-radius: 50%;
-}
-
-.contact-map-placeholder p {
-  margin: 0 0 5px;
-  color: $contact-dark;
-  font-weight: 700;
-}
-
-.contact-map-placeholder span {
-  font-size: 14px;
+  box-shadow: 0 8px 20px rgba(11, 11, 11, 0.05);
 }
 
 /* Sur tablette, le formulaire et les informations s'empilent pour préserver la largeur des champs. */
@@ -481,8 +455,8 @@ $contact-border: #cbe5ea;
     font-size: 20px;
   }
 
-  .contact-map-placeholder {
-    min-height: 265px;
+  .contact-map {
+    height: 265px;
   }
 }
 
@@ -578,7 +552,7 @@ $contact-border: #cbe5ea;
     font-size: 17px;
   }
 
-  .contact-map-placeholder {
-    min-height: 225px;
+  .contact-map {
+    height: 225px;
   }
 }
