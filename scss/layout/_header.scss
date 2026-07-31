@@ -64,12 +64,15 @@
 /*
  * Le fichier du logo contient une zone transparente réservée à son ombre.
  * La marge négative aligne le carré bleu avec le bord du contenu.
+ * La translation compense l'espace transparent plus important sous le carré
+ * afin que la partie visible du logo soit centrée verticalement dans le header.
  */
 .site-header__logo {
   display: block;
   width: 76px;
   height: 74px;
   margin-left: -14px;
+  transform: translateY(5px);
 }
 
 .site-header__surname {
@@ -197,6 +200,7 @@
     width: 54px;
     height: 53px;
     margin-left: -10px;
+    transform: translateY(4px);
   }
 
   .site-header__menu-button {
