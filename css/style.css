@@ -1891,6 +1891,16 @@ body {
   line-height: 1.45;
 }
 
+/* Le lien vers la politique de confidentialité reste repérable au clavier. */
+.contact-form__privacy a {
+  color: rgb(7, 143, 167);
+}
+
+.contact-form__privacy a:focus-visible {
+  outline: 3px solid rgb(7, 143, 167);
+  outline-offset: 3px;
+}
+
 .contact-form__submit {
   min-height: 54px;
   padding: 12px 24px;
@@ -2145,6 +2155,10 @@ body {
   .contact-information__icon,
   .contact-card__link {
     display: none;
+  }
+  /* Le bouton WhatsApp reste une action de contact utile sur les petits écrans. */
+  .contact-card__link--primary {
+    display: flex;
   }
   .contact-location {
     padding: 58px 0 68px;
