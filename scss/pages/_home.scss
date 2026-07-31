@@ -388,7 +388,8 @@ $home-border: #cbe5ea;
 }
 
 .site-footer__socials,
-.site-footer__navigation ul {
+.site-footer__navigation ul,
+.site-footer__legal ul {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -420,8 +421,22 @@ $home-border: #cbe5ea;
   margin-top: 10px;
 }
 
+/* Les liens légaux restent groupés et faciles à retrouver sur chaque page. */
+.site-footer__legal {
+  grid-column: 1 / -1;
+}
+
+.site-footer__legal ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 24px;
+  padding-top: 24px;
+  border-top: 1px solid #cfd8dc;
+}
+
 .site-footer__navigation a,
-.site-footer__contact a {
+.site-footer__contact a,
+.site-footer__legal a {
   color: $home-text;
   text-decoration: none;
 }
@@ -429,13 +444,17 @@ $home-border: #cbe5ea;
 .site-footer__navigation a:hover,
 .site-footer__navigation a:focus-visible,
 .site-footer__contact a:hover,
-.site-footer__contact a:focus-visible {
+.site-footer__contact a:focus-visible,
+.site-footer__legal a:hover,
+.site-footer__legal a:focus-visible {
   color: $home-primary;
   text-decoration: underline;
 }
 
 .site-footer__contact {
   display: grid;
+  grid-column: 3;
+  grid-row: 1;
   gap: 10px;
   font-style: normal;
 }
@@ -660,6 +679,16 @@ $home-border: #cbe5ea;
 
   .site-footer__identity {
     grid-column: 1 / -1;
+  }
+
+  .site-footer__contact {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .site-footer__legal ul {
+    display: grid;
+    gap: 10px;
   }
 
   .site-footer__brand {

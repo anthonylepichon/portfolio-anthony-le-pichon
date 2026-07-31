@@ -778,7 +778,8 @@ body {
 }
 
 .site-footer__socials,
-.site-footer__navigation ul {
+.site-footer__navigation ul,
+.site-footer__legal ul {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -810,8 +811,22 @@ body {
   margin-top: 10px;
 }
 
+/* Les liens légaux restent groupés et faciles à retrouver sur chaque page. */
+.site-footer__legal {
+  grid-column: 1/-1;
+}
+
+.site-footer__legal ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 24px;
+  padding-top: 24px;
+  border-top: 1px solid #cfd8dc;
+}
+
 .site-footer__navigation a,
-.site-footer__contact a {
+.site-footer__contact a,
+.site-footer__legal a {
   color: #2f3437;
   text-decoration: none;
 }
@@ -819,13 +834,17 @@ body {
 .site-footer__navigation a:hover,
 .site-footer__navigation a:focus-visible,
 .site-footer__contact a:hover,
-.site-footer__contact a:focus-visible {
+.site-footer__contact a:focus-visible,
+.site-footer__legal a:hover,
+.site-footer__legal a:focus-visible {
   color: rgb(7, 143, 167);
   text-decoration: underline;
 }
 
 .site-footer__contact {
   display: grid;
+  grid-column: 3;
+  grid-row: 1;
   gap: 10px;
   font-style: normal;
 }
@@ -1007,6 +1026,14 @@ body {
   }
   .site-footer__identity {
     grid-column: 1/-1;
+  }
+  .site-footer__contact {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .site-footer__legal ul {
+    display: grid;
+    gap: 10px;
   }
   .site-footer__brand {
     font-size: 18px;
@@ -2577,5 +2604,88 @@ body {
   }
   .projects-contact p {
     font-size: 15px;
+  }
+}
+/*
+ * Les pages légales partagent une présentation volontairement sobre.
+ * Une largeur de lecture limitée rend les informations longues plus confortables
+ * à consulter, quel que soit le format d'écran.
+ */
+.legal-page {
+  padding: 72px 0;
+  background-color: #f7fbfc;
+}
+
+.legal-container {
+  width: min(100% - 48px, 920px);
+  margin: 0 auto;
+}
+
+.legal-page h1 {
+  margin: 0 0 16px;
+  color: #078fa7;
+  font-family: "Rajdhani", Arial, sans-serif;
+  font-size: 44px;
+  line-height: 1.1;
+}
+
+.legal-page__introduction {
+  max-width: 720px;
+  margin: 0 0 36px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.legal-page__section {
+  padding: 28px;
+  margin-top: 20px;
+  background-color: #ffffff;
+  border: 1px solid #c8e4e9;
+  border-radius: 10px;
+}
+
+.legal-page h2 {
+  margin: 0 0 16px;
+  color: #2f3437;
+  font-size: 24px;
+}
+
+.legal-page p,
+.legal-page li {
+  line-height: 1.65;
+}
+
+.legal-page p:last-child,
+.legal-page ul:last-child {
+  margin-bottom: 0;
+}
+
+.legal-page a {
+  color: #057d92;
+}
+
+.legal-page a:hover,
+.legal-page a:focus-visible {
+  color: #045d6c;
+}
+
+.legal-page a:focus-visible {
+  outline: 3px solid #078fa7;
+  outline-offset: 3px;
+}
+
+@media screen and (max-width: 600px) {
+  /* Sur mobile, des cartes plus compactes évitent de réduire la taille du texte. */
+  .legal-page {
+    padding: 48px 0;
+  }
+  .legal-page h1 {
+    font-size: 36px;
+  }
+  .legal-page__introduction {
+    font-size: 16px;
+  }
+  .legal-page__section {
+    padding: 22px;
   }
 }
