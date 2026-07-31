@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Le sitemap aide les moteurs de recherche à découvrir les pages publiques du portfolio. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://anthonylepichon.com/</loc>
+    </url>
+    <url>
+        <loc>https://anthonylepichon.com/pages/a-propos.html</loc>
+    </url>
+    <url>
+        <loc>https://anthonylepichon.com/pages/competences.html</loc>
+    </url>
+    <url>
+        <loc>https://anthonylepichon.com/pages/projets.html</loc>
+    </url>
+    <url>
+        <loc>https://anthonylepichon.com/pages/contact.html</loc>
+    </url>
+    <url>
+        <loc>https://anthonylepichon.com/pages/mentions-legales.html</loc>
+    </url>
+    <url>
+        <loc>https://anthonylepichon.com/pages/politique-confidentialite.html</loc>
+    </url>
+</urlset>

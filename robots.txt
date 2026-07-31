@@ -1,0 +1,6 @@
+# Ce fichier indique aux moteurs de recherche que les pages publiques peuvent être explorées.
+User-agent: *
+Allow: /
+
+# Le sitemap liste les adresses canoniques à proposer à l'indexation.
+Sitemap: https://anthonylepichon.com/sitemap.xml
