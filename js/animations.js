@@ -3,7 +3,8 @@
  * l'accès au contenu. Le HTML reste visible si JavaScript est désactivé ou si
  * le navigateur ne prend pas en charge IntersectionObserver.
  */
-const sectionsToReveal = document.querySelectorAll("main section");
+/* Le hero reste stable à l'ouverture : seules les sections suivantes sont révélées au défilement. */
+const sectionsToReveal = document.querySelectorAll("main section:not(:first-of-type)");
 
 if ("IntersectionObserver" in window) {
     /*
