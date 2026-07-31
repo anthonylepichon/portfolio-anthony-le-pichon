@@ -159,62 +159,17 @@
                     <span>Mes</span> <span class="text-accent">réalisations</span>
                 </h2>
 
-                <!--
-                    Les projets principaux sont écrits dans le HTML pour rester immédiatement
-                    accessibles aux visiteurs et aux moteurs de recherche, même sans JavaScript.
-                -->
-                <div class="project-grid">
-                    <article class="project-card">
-                        <img
-                            class="project-card__image"
-                            src="assets/images/illustrations/projets.svg"
-                            alt=""
-                            loading="lazy"
-                        >
-                        <div class="project-card__content">
-                            <h3>Plateforme e-learning</h3>
-                            <p class="project-card__category">React/Vue.js</p>
-                            <p class="project-card__description">
-                                Plateforme de formation en ligne avec React et Node.js : gestion de parcours,
-                                vidéos interactives, quiz et suivi de progression pour entreprises.
-                            </p>
-                        </div>
-                    </article>
+                <!-- Les trois projets avec "featured": true sont créés depuis data/projects.json. -->
+                <p id="home-projects-status" class="visually-hidden" role="status" aria-live="polite">
+                    Chargement des réalisations…
+                </p>
+                <div id="home-projects-list" class="project-grid"></div>
 
-                    <article class="project-card">
-                        <img
-                            class="project-card__image"
-                            src="assets/images/illustrations/projets.svg"
-                            alt=""
-                            loading="lazy"
-                        >
-                        <div class="project-card__content">
-                            <h3>Application mobile gestion terrain</h3>
-                            <p class="project-card__category">Applications mobiles</p>
-                            <p class="project-card__description">
-                                Application WINDEV Mobile pour techniciens terrain : interventions, photos
-                                géolocalisées, rapports numériques et synchronisation offline/online.
-                            </p>
-                        </div>
-                    </article>
-
-                    <article class="project-card">
-                        <img
-                            class="project-card__image"
-                            src="assets/images/illustrations/projets.svg"
-                            alt=""
-                            loading="lazy"
-                        >
-                        <div class="project-card__content">
-                            <h3>Système de contrôle d’accès</h3>
-                            <p class="project-card__category">Full Stack</p>
-                            <p class="project-card__description">
-                                Solution complète de gestion d’accès biométrique avec interface web React,
-                                API Node.js et application mobile pour sites sensibles.
-                            </p>
-                        </div>
-                    </article>
-                </div>
+                <noscript>
+                    <p class="project-grid__status">
+                        JavaScript doit être activé pour afficher les réalisations.
+                    </p>
+                </noscript>
 
                 <div class="home-projects__action">
                     <a class="button button--secondary" href="pages/projets.html">Voir tous mes projets</a>
@@ -352,5 +307,6 @@
 
     <!-- Le script est placé à la fin pour que le HTML soit chargé avant son exécution. -->
     <script src="js/header.js"></script>
+    <script src="js/home-projects.js"></script>
 </body>
 </html>
