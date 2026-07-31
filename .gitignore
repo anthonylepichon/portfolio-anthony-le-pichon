@@ -1,0 +1,3 @@
+# La configuration SFTP peut contenir le mot de passe de l'hébergement OVH.
+# Elle reste sur cet ordinateur et ne doit jamais être envoyée sur GitHub.
+.vscode/sftp.json
