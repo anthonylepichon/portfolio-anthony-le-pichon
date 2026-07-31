@@ -14,6 +14,18 @@ Le portfolio présente :
 - un formulaire de contact géré par Formspree ;
 - les pages de mentions légales et de politique de confidentialité.
 
+### Page d’accueil
+
+![Page d’accueil du portfolio](assets/documents/Maquette%20desktop%201440%20px/Accueil.jpg)
+
+### Projets
+
+![Page projets du portfolio](assets/documents/Maquette%20desktop%201440%20px/Projets.jpg)
+
+### Version mobile
+
+![Accueil du portfolio sur mobile](assets/documents/Maquette%20mobile%20390%20px/Mobile%20-%20Accueil.jpg)
+
 ## Technologies utilisées
 
 - HTML5 sémantique ;
@@ -87,5 +99,5 @@ Un audit Lighthouse réalisé sur la version publique a obtenu les scores suivan
 
 ## Auteur
 
-Anthony Le Pichon  
+Anthony Le Pichon
 [LinkedIn](https://www.linkedin.com/in/anthonylepichon/) · [GitHub](https://github.com/anthonylepichon) · [Portfolio](https://anthonylepichon.com)
