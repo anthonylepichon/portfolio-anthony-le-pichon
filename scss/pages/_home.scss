@@ -135,6 +135,8 @@ $home-border: #cbe5ea;
   display: block;
   width: 430px;
   max-width: 100%;
+  /* Le ratio connu réserve la place du portrait avant son chargement et limite les décalages visuels. */
+  aspect-ratio: 398 / 441;
 }
 
 /* Vision business */
