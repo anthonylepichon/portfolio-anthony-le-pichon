@@ -35,7 +35,7 @@
       "description": "Plateforme de formation en ligne avec React et Node.js : gestion de parcours, vidéos interactives, quiz et suivi de progression pour entreprises.",
       "image": "/assets/images/illustrations/projets.svg",
       "imageAlt": "",
-      "featured": false
+      "featured": true
     },
     {
       "id": 2,
