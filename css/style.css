@@ -167,7 +167,9 @@ body {
 }
 
 .site-header {
-  position: relative;
+  /* sticky conserve la place du header dans la page tout en le gardant visible au défilement. */
+  position: sticky;
+  top: 0;
   z-index: 20;
   background-color: #ffffff;
   border-bottom: 1px solid #d1e7ec;
