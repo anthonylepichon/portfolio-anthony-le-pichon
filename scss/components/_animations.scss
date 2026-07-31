@@ -38,4 +38,19 @@
     box-shadow: 0 10px 22px rgba(11, 11, 11, 0.12);
   }
 }
+/* Le contenu s'efface avant la navigation puis réapparaît à l'ouverture de la page suivante. */
+@media (prefers-reduced-motion: no-preference) {
+  main.page-transition--initial,
+  main.page-transition--leaving {
+    opacity: 0;
+  }
+
+  main.page-transition--entered {
+    opacity: 1;
+    transition: opacity 0.2s ease;
+  }
+
+  main.page-transition--leaving {
+    transition: opacity 0.2s ease;
+  }
 }

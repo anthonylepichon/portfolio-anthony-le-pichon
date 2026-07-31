@@ -134,7 +134,8 @@ $home-border: #cbe5ea;
 
 .home-hero__portrait-image {
   display: block;
-  width: 430px;
+  /* La hauteur du portrait reste alignée sur le bloc de présentation à gauche. */
+  width: 300px;
   max-width: 100%;
   /* Le ratio connu réserve la place du portrait avant son chargement et limite les décalages visuels. */
   aspect-ratio: 398 / 441;
