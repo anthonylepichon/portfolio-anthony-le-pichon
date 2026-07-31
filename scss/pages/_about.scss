@@ -113,6 +113,13 @@ $about-experience-border: #f1d0b5;
   outline-offset: 3px;
 }
 
+/* Ce message est affiché seulement si le fichier JSON ne peut pas être chargé. */
+.timeline-status {
+  margin: 0 0 28px;
+  color: $about-dark;
+  text-align: center;
+}
+
 /* La ligne centrale est indépendante des cartes afin de rester continue. */
 .timeline-list {
   position: relative;

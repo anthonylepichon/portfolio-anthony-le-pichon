@@ -111,198 +111,26 @@
             <div class="about-container">
                 <h2 id="timeline-title" class="visually-hidden">Parcours professionnel et formations</h2>
 
-                <!-- Ces boutons filtrent la frise sans modifier son ordre chronologique. -->
-                <div class="timeline-filters" role="group" aria-label="Filtrer le parcours">
-                    <button
-                        id="filter-all"
-                        class="timeline-filters__button is-active"
-                        type="button"
-                        aria-pressed="true"
-                    >
-                        Tout
-                    </button>
-                    <button
-                        id="filter-training"
-                        class="timeline-filters__button"
-                        type="button"
-                        aria-pressed="false"
-                    >
-                        Formations
-                    </button>
-                    <button
-                        id="filter-experience"
-                        class="timeline-filters__button"
-                        type="button"
-                        aria-pressed="false"
-                    >
-                        Expériences professionnelles
-                    </button>
-                </div>
+                <!-- Les filtres et les cartes de la frise sont créés depuis data/experiences.json. -->
+                <div
+                    id="timeline-filters"
+                    class="timeline-filters"
+                    role="group"
+                    aria-label="Filtrer le parcours"
+                ></div>
 
-                <!-- La liste ordonnée conserve le sens chronologique même sans mise en page CSS. -->
-                <ol class="timeline-list">
-                    <li class="timeline-entry timeline-entry--right timeline-entry--training">
-                        <span class="timeline-entry__date">2026</span>
-                        <article class="timeline-card">
-                            <h3>Développeur web full stack</h3>
-                            <p class="timeline-card__organization">Webecom</p>
-                            <p>Formation professionnelle en développement web full stack avec obtention d'une certification.</p>
-                        </article>
-                    </li>
+                <p id="timeline-status" class="visually-hidden" role="status" aria-live="polite">
+                    Chargement du parcours…
+                </p>
 
-                    <li class="timeline-entry timeline-entry--left timeline-entry--experience">
-                        <span class="timeline-entry__date">2020 – 2025</span>
-                        <article class="timeline-card">
-                            <h3>Consultant digital freelance</h3>
-                            <p class="timeline-card__organization">Pragma6 — Région parisienne</p>
-                            <p>Transformation digitale, développement d'applications et création de sites web, avec animation de formations pour divers clients.</p>
-                        </article>
-                    </li>
+                <!-- JavaScript crée les entrées en conservant l'ordre chronologique défini dans le JSON. -->
+                <ol id="timeline-list" class="timeline-list"></ol>
 
-                    <li class="timeline-entry timeline-entry--right timeline-entry--training">
-                        <span class="timeline-entry__date">2022</span>
-                        <article class="timeline-card">
-                            <h3>Formation WINDEV Mobile</h3>
-                            <p class="timeline-card__organization">PC SOFT</p>
-                            <p>Formation au développement d'applications mobiles avec WINDEV Mobile pour Android et iOS.</p>
-                        </article>
-                    </li>
-
-                    <li class="timeline-entry timeline-entry--left timeline-entry--experience">
-                        <span class="timeline-entry__date">2017 – 2020</span>
-                        <article class="timeline-card">
-                            <h3>Concepteur d'outils pédagogiques digitaux</h3>
-                            <p class="timeline-card__organization">High Potential Management — Paris 8</p>
-                            <p>Conception de dispositifs de formation digitaux et animation de sessions hybrides en prise de parole pour cadres à haut potentiel — TotalEnergies.</p>
-                        </article>
-                    </li>
-
-                    <li class="timeline-entry timeline-entry--right timeline-entry--training">
-                        <span class="timeline-entry__date">2018</span>
-                        <article class="timeline-card">
-                            <h3>Formation WEBDEV avancé</h3>
-                            <p class="timeline-card__organization">PC SOFT</p>
-                            <p>Perfectionnement WEBDEV pour concevoir des applications web complexes et sécurisées.</p>
-                        </article>
-                    </li>
-
-                    <li class="timeline-entry timeline-entry--left timeline-entry--training">
-                        <span class="timeline-entry__date">2017</span>
-                        <article class="timeline-card">
-                            <h3>Formation WEBDEV intermédiaire</h3>
-                            <p class="timeline-card__organization">PC SOFT</p>
-                            <p>Approfondissement de WEBDEV pour développer des applications web professionnelles et optimiser l'accès aux données.</p>
-                        </article>
-                    </li>
-
-                    <li class="timeline-entry timeline-entry--right timeline-entry--training">
-                        <span class="timeline-entry__date">2016</span>
-                        <article class="timeline-card">
-                            <h3>Formation WEBDEV fondamentaux</h3>
-                            <p class="timeline-card__organization">PC SOFT</p>
-                            <p>Formation aux fondamentaux de WEBDEV pour concevoir rapidement des applications web connectées aux bases de données.</p>
-                        </article>
-                    </li>
-
-                    <li class="timeline-entry timeline-entry--left timeline-entry--experience">
-                        <span class="timeline-entry__date">2011 – 2016</span>
-                        <article class="timeline-card">
-                            <h3>Cofondateur &amp; Business Developer</h3>
-                            <p class="timeline-card__organization">Startup IONOSYS — Paris</p>
-                            <p>Développement d'un bracelet biométrique connecté pour le contrôle d'accès sur sites sensibles.</p>
-                        </article>
-                    </li>
-
-                    <li class="timeline-entry timeline-entry--right timeline-entry--training">
-                        <span class="timeline-entry__date">2012</span>
-                        <article class="timeline-card">
-                            <h3>Responsable de centre de profit</h3>
-                            <p class="timeline-card__organization">CEGOS</p>
-                            <p>Formation au pilotage stratégique, financier et managérial d'une unité économique autonome.</p>
-                        </article>
-                    </li>
-
-                    <li class="timeline-entry timeline-entry--left timeline-entry--training">
-                        <span class="timeline-entry__date">2012</span>
-                        <article class="timeline-card">
-                            <h3>Formation anglais professionnel</h3>
-                            <p class="timeline-card__organization">Wall Street Institute</p>
-                            <p>Formation en anglais orientée communication professionnelle avec pratique orale et modules multimédias interactifs.</p>
-                        </article>
-                    </li>
-
-                    <li class="timeline-entry timeline-entry--right timeline-entry--experience">
-                        <span class="timeline-entry__date">2006 – 2011</span>
-                        <article class="timeline-card">
-                            <h3>Directeur de centre de profit</h3>
-                            <p class="timeline-card__organization">Le Choix Funéraire — 44</p>
-                            <p>Pilotage d'activité et transformation digitale des services funéraires, incluant déploiement d'outils informatiques et gestion des systèmes.</p>
-                        </article>
-                    </li>
-
-                    <li class="timeline-entry timeline-entry--left timeline-entry--experience">
-                        <span class="timeline-entry__date">2004 – 2006</span>
-                        <article class="timeline-card">
-                            <h3>Directeur commercial</h3>
-                            <p class="timeline-card__organization">DEV Gestion 44</p>
-                            <p>Audit et conseil en marketing, informatique et organisation pour entreprises, avec déploiement de solutions digitales.</p>
-                        </article>
-                    </li>
-
-                    <li class="timeline-entry timeline-entry--right timeline-entry--experience">
-                        <span class="timeline-entry__date">2000 – 2004</span>
-                        <article class="timeline-card">
-                            <h3>Directeur commercial adjoint</h3>
-                            <p class="timeline-card__organization">ACS Production</p>
-                            <p>Promotion cadre et pilotage de projets internationaux de structures innovantes, avec participation aux négociations et au développement de la filiale US.</p>
-                        </article>
-                    </li>
-
-                    <li class="timeline-entry timeline-entry--left timeline-entry--experience">
-                        <span class="timeline-entry__date">1996 – 2000</span>
-                        <article class="timeline-card">
-                            <h3>Technico-commercial DAO</h3>
-                            <p class="timeline-card__organization">ACS Production</p>
-                            <p>Réponse aux appels d'offres pour structures métalliques et membranes tendues, avec modélisation technique et mise en place des outils informatiques.</p>
-                        </article>
-                    </li>
-
-                    <li class="timeline-entry timeline-entry--right timeline-entry--experience">
-                        <span class="timeline-entry__date">1995 – 1996</span>
-                        <article class="timeline-card">
-                            <h3>Assistant informatique judiciaire</h3>
-                            <p class="timeline-card__organization">Gendarmerie nationale — Paris 4e</p>
-                            <p>Appui informatique au service de recherches judiciaires et formation des gendarmes aux outils numériques.</p>
-                        </article>
-                    </li>
-
-                    <li class="timeline-entry timeline-entry--left timeline-entry--experience">
-                        <span class="timeline-entry__date">1994 – 1995</span>
-                        <article class="timeline-card">
-                            <h3>Dessinateur métreur</h3>
-                            <p class="timeline-card__organization">Survey International Business — Pornichet (44)</p>
-                            <p>Relevés terrain, modélisation visuelle et conception de dossiers de rénovation pour la mise aux normes graphiques de réseaux de magasins.</p>
-                        </article>
-                    </li>
-
-                    <li class="timeline-entry timeline-entry--right timeline-entry--training">
-                        <span class="timeline-entry__date">1993 – 1994</span>
-                        <article class="timeline-card">
-                            <h3>Licence mécanique des structures</h3>
-                            <p class="timeline-card__organization">UPMC — Paris VI</p>
-                            <p>Formation en mécanique des structures appliquée à l'ingénierie et à l'analyse des systèmes mécaniques.</p>
-                        </article>
-                    </li>
-
-                    <li class="timeline-entry timeline-entry--left timeline-entry--training">
-                        <span class="timeline-entry__date">1991 – 1993</span>
-                        <article class="timeline-card">
-                            <h3>DUT Génie civil</h3>
-                            <p class="timeline-card__organization">IUT de Saint-Nazaire</p>
-                            <p>Formation en génie civil avec spécialisation en informatique, CAO/DAO et gestion de projets.</p>
-                        </article>
-                    </li>
-                </ol>
+                <noscript>
+                    <p class="timeline-status">
+                        JavaScript doit être activé pour afficher le parcours professionnel et les formations.
+                    </p>
+                </noscript>
             </div>
         </section>
         <!-- Fin de la section Parcours. -->
