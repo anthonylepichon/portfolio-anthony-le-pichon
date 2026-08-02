@@ -72,6 +72,18 @@
     {
       "id": "webdev serveur",
       "label": "WEBDEV Serveur"
+    },
+    {
+      "id": "windev mobile",
+      "label": "WINDEV Mobile"
+    },
+    {
+      "id": "android",
+      "label": "Android"
+    },
+    {
+      "id": "ios",
+      "label": "iOS"
     }
   ],
   "projects": [
@@ -171,6 +183,25 @@
         "label": "En production"
       },
       "featured": true
+    },
+    {
+      "id": 6,
+      "title": "CSEPRIME MOBILE",
+      "technologies": [
+        "WINDEV Mobile",
+        "WLangage",
+        "HFSQL",
+        "Android",
+        "iOS"
+      ],
+      "description": "Application mobile Android et iOS complémentaire de CSEPRIME WEB, développée avec WINDEV Mobile. Elle reprend les services destinés aux salariés et intègre des fonctionnalités supplémentaires pour les élus du CSE, notamment la saisie de leurs notes de frais.",
+      "image": "/assets/images/illustrations/projets.svg",
+      "imageAlt": "Illustration temporaire utilisée pour présenter le projet CSEPRIME MOBILE",
+      "status": {
+        "id": "production",
+        "label": "En production"
+      },
+      "featured": false
     }
   ]
 }
