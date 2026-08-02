@@ -56,6 +56,22 @@
     {
       "id": "doctrine",
       "label": "Doctrine"
+    },
+    {
+      "id": "webdev",
+      "label": "WEBDEV"
+    },
+    {
+      "id": "wlangage",
+      "label": "WLangage"
+    },
+    {
+      "id": "hfsql",
+      "label": "HFSQL"
+    },
+    {
+      "id": "webdev serveur",
+      "label": "WEBDEV Serveur"
     }
   ],
   "projects": [
@@ -119,6 +135,24 @@
         "label": "En développement"
       },
       "featured": true
+    },
+    {
+      "id": 4,
+      "title": "Mybord",
+      "technologies": [
+        "WEBDEV",
+        "WLangage",
+        "HFSQL",
+        "WEBDEV Serveur"
+      ],
+      "description": "Application web de gestion commerciale permettant de centraliser les clients, les articles, les ventes, les achats, les stocks, les banques, la trésorerie et les documents. Développée avec WEBDEV et WLangage, elle utilise HFSQL et WEBDEV Serveur pour gérer les données et le suivi de l’activité.",
+      "image": "/assets/images/projects/mybord.webp",
+      "imageAlt": "Capture de l’interface principale du projet Mybord",
+      "status": {
+        "id": "production",
+        "label": "En production"
+      },
+      "featured": false
     }
   ]
 }
