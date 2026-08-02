@@ -153,6 +153,24 @@
         "label": "En production"
       },
       "featured": false
+    },
+    {
+      "id": 5,
+      "title": "CSEPRIME WEB",
+      "technologies": [
+        "WEBDEV",
+        "WLangage",
+        "HFSQL",
+        "WEBDEV Serveur"
+      ],
+      "description": "Application web destinée aux comités sociaux et économiques (CSE), conçue intégralement avec WEBDEV, de la rédaction du cahier des charges à la mise en production et à la maintenance. Elle propose aux salariés un espace de communication et de commande d’offres subventionnées, ainsi qu’un back-office permettant aux élus du CSE de paramétrer le site et de préparer les éléments comptables.",
+      "image": "/assets/images/projects/mybord.webp",
+      "imageAlt": "Image temporaire du projet Mybord utilisée pour présenter CSEPRIME WEB",
+      "status": {
+        "id": "production",
+        "label": "En production"
+      },
+      "featured": true
     }
   ]
 }
