@@ -43,7 +43,7 @@ function createProjectCards(projects, defaultImage, featuredIcon) {
         const visual = document.createElement("div");
         const projectImage = document.createElement("img");
         const content = document.createElement("div");
-        const category = document.createElement("p");
+        const technologies = document.createElement("ul");
         const title = document.createElement("h3");
         const description = document.createElement("p");
         let imageSource = defaultImage;
@@ -80,15 +80,25 @@ function createProjectCards(projects, defaultImage, featuredIcon) {
         }
 
         content.className = "projects-card__content";
-        category.className = "projects-card__category";
-        /* textContent affiche les données comme du texte, sans interpréter de code HTML. */
-        category.textContent = project.categoryLabel;
+        technologies.className = "projects-card__technologies";
+
+        /* Chaque valeur du tableau technologies devient une pastille indépendante.
+         * La boucle permet d'ajouter de nouveaux mots-clés depuis le JSON sans modifier le HTML. */
+        for (let technologyIndex = 0; technologyIndex < project.technologies.length; technologyIndex++) {
+            const technology = document.createElement("li");
+
+            technology.className = "projects-card__technology";
+            /* textContent affiche la technologie comme du texte, sans interpréter de code HTML. */
+            technology.textContent = project.technologies[technologyIndex];
+            technologies.appendChild(technology);
+        }
+
         title.textContent = project.title;
         description.className = "projects-card__description";
         description.textContent = project.description;
 
         visual.appendChild(projectImage);
-        content.appendChild(category);
+        content.appendChild(technologies);
         content.appendChild(title);
         content.appendChild(description);
         card.appendChild(visual);
@@ -98,7 +108,7 @@ function createProjectCards(projects, defaultImage, featuredIcon) {
 }
 
 function createProjectFilters(filters, projects) {
-    /* Chaque bouton transmet l'identifiant de sa catégorie à la fonction de filtrage. */
+    /* Chaque bouton transmet l'identifiant d'une technologie à la fonction de filtrage. */
     removeChildren(projectsFilters);
 
     for (let index = 0; index < filters.length; index++) {
@@ -125,7 +135,7 @@ function createProjectFilters(filters, projects) {
 }
 
 function updateActiveFilter(activeButton) {
-    /* aria-pressed annonce quelle catégorie est active aux technologies d'assistance. */
+    /* aria-pressed annonce quel filtre est actif aux technologies d'assistance. */
     const filterButtons = projectsFilters.querySelectorAll("button");
 
     for (let index = 0; index < filterButtons.length; index++) {
@@ -137,16 +147,31 @@ function updateActiveFilter(activeButton) {
     activeButton.setAttribute("aria-pressed", "true");
 }
 
-function filterProjects(categoryId, projects) {
-    /* hidden retire visuellement et sémantiquement les cartes qui ne correspondent pas au filtre. */
+function filterProjects(filterId, projects) {
+    /* hidden retire visuellement et sémantiquement les cartes qui n'utilisent pas la technologie choisie. */
     let visibleProjects = 0;
 
     for (let index = 0; index < projects.length; index++) {
         const project = projects[index];
         const card = document.querySelector("#project-" + project.id);
+        let projectMatchesFilter = false;
+
+        if (filterId === "all") {
+            projectMatchesFilter = true;
+        } else {
+            /* La comparaison en minuscules relie les libellés du JSON aux identifiants des filtres. */
+            for (let technologyIndex = 0; technologyIndex < project.technologies.length; technologyIndex++) {
+                const technologyId = project.technologies[technologyIndex].toLowerCase();
+
+                if (technologyId === filterId) {
+                    projectMatchesFilter = true;
+                    break;
+                }
+            }
+        }
 
         if (card !== null) {
-            if (categoryId === "all" || project.categoryId === categoryId) {
+            if (projectMatchesFilter === true) {
                 card.hidden = false;
                 visibleProjects = visibleProjects + 1;
             } else {
@@ -155,7 +180,12 @@ function filterProjects(categoryId, projects) {
         }
     }
 
-    projectsStatus.textContent = visibleProjects + " projets affichés.";
+    /* Le message reste grammaticalement correct lorsqu'un seul projet correspond au filtre. */
+    if (visibleProjects === 1) {
+        projectsStatus.textContent = "1 projet affiché.";
+    } else {
+        projectsStatus.textContent = visibleProjects + " projets affichés.";
+    }
 }
 
 function removeChildren(element) {

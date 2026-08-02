@@ -255,13 +255,22 @@ $home-border: #cbe5ea;
   line-height: 1.2;
 }
 
-.project-card__category {
-  display: inline-block;
-  padding: 5px 12px;
+.project-card__technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0;
   margin: 18px 0;
+  list-style: none;
+}
+
+/* Les pastilles passent naturellement sur plusieurs lignes lorsque la carte devient plus étroite. */
+.project-card__technology {
+  padding: 5px 12px;
   color: $home-primary;
   font-size: 13px;
   font-weight: 700;
+  white-space: nowrap;
   text-transform: uppercase;
   border: 1px solid $home-primary;
   border-radius: 20px;

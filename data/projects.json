@@ -10,82 +10,69 @@
       "label": "Tout"
     },
     {
-      "id": "webdev-windev",
-      "label": "WEBDEV/WINDEV"
+      "id": "html",
+      "label": "HTML"
     },
     {
-      "id": "react-vuejs",
-      "label": "React/Vue.js"
+      "id": "scss",
+      "label": "SCSS"
     },
     {
-      "id": "mobile-apps",
-      "label": "Applications mobiles"
+      "id": "javascript",
+      "label": "JavaScript"
     },
     {
-      "id": "full-stack",
-      "label": "Full Stack"
+      "id": "json",
+      "label": "JSON"
+    },
+    {
+      "id": "php",
+      "label": "PHP"
+    },
+    {
+      "id": "mysql",
+      "label": "MySQL"
+    },
+    {
+      "id": "ajax",
+      "label": "AJAX"
+    },
+    {
+      "id": "mvc",
+      "label": "MVC"
     }
   ],
   "projects": [
     {
       "id": 1,
-      "title": "Plateforme e-learning",
-      "categoryId": "react-vuejs",
-      "categoryLabel": "React/Vue.js",
-      "description": "Plateforme de formation en ligne avec React et Node.js : gestion de parcours, vidéos interactives, quiz et suivi de progression pour entreprises.",
-      "image": "/assets/images/illustrations/projets.svg",
-      "imageAlt": "",
+      "title": "Portfolio Anthony LE PICHON",
+      "technologies": [
+        "HTML",
+        "SCSS",
+        "JavaScript",
+        "JSON"
+      ],
+      "description": "Portfolio web responsive présentant mon profil, mes compétences, mon parcours et mes projets. Développé en HTML, SCSS et JavaScript natif, il utilise des fichiers JSON pour générer dynamiquement les contenus et propose un formulaire de contact accessible.",
+      "image": "/assets/images/projects/portfolio-anthony-le-pichon.webp",
+      "imageAlt": "Capture de l’interface principale du portfolio d’Anthony LE PICHON",
       "featured": true
     },
     {
       "id": 2,
-      "title": "Application mobile gestion terrain",
-      "categoryId": "mobile-apps",
-      "categoryLabel": "Applications mobiles",
-      "description": "Application WINDEV Mobile pour techniciens terrain : interventions, photos géolocalisées, rapports numériques et synchronisation offline/online.",
-      "image": "/assets/images/illustrations/projets.svg",
-      "imageAlt": "",
+      "title": "Farine et Potiron",
+      "technologies": [
+        "PHP",
+        "MySQL",
+        "HTML",
+        "SCSS",
+        "JavaScript",
+        "AJAX",
+        "MVC"
+      ],
+      "description": "Application web responsive de partage de recettes développée en PHP orienté objet avec une architecture MVC et MySQL. Elle permet de rechercher des recettes par farine, durée ou difficulté, puis de créer un compte pour publier, modifier, commenter et noter des recettes.",
+      "image": "/assets/images/projects/farine-et-potiron.webp",
+      "imageAlt": "Capture de l’interface principale du projet Farine et Potiron",
       "featured": false
-    },
-    {
-      "id": 3,
-      "title": "Système de contrôle d’accès",
-      "categoryId": "full-stack",
-      "categoryLabel": "Full Stack",
-      "description": "Solution complète de gestion d’accès biométrique avec interface web React, API Node.js et application mobile pour sites sensibles.",
-      "image": "/assets/images/illustrations/projets.svg",
-      "imageAlt": "",
-      "featured": false
-    },
-    {
-      "id": 4,
-      "title": "Plateforme de gestion énergétique",
-      "categoryId": "webdev-windev",
-      "categoryLabel": "WEBDEV/WINDEV",
-      "description": "Application web WEBDEV avec tableau de bord analytique pour le suivi de consommation énergétique et l’optimisation des coûts pour de grands groupes.",
-      "image": "/assets/images/illustrations/projets.svg",
-      "imageAlt": "",
-      "featured": true
-    },
-    {
-      "id": 5,
-      "title": "Plateforme SaaS facturation",
-      "categoryId": "full-stack",
-      "categoryLabel": "Full Stack",
-      "description": "Solution SaaS complète avec React, Node.js et MongoDB : gestion des clients, devis, factures, paiements Stripe et exports comptables automatisés.",
-      "image": "/assets/images/illustrations/projets.svg",
-      "imageAlt": "",
-      "featured": false
-    },
-    {
-      "id": 6,
-      "title": "Dashboard analytique temps réel",
-      "categoryId": "react-vuejs",
-      "categoryLabel": "React/Vue.js",
-      "description": "Interface Vue.js avec graphiques dynamiques et indicateurs en temps réel, connectée à MongoDB pour l’analyse de données métier et l’aide à la décision.",
-      "image": "/assets/images/illustrations/projets.svg",
-      "imageAlt": "",
-      "featured": true
     }
   ]
 }

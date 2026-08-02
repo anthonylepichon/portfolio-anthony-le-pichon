@@ -57,7 +57,7 @@ function createFeaturedProjectCards(projects, defaultImage) {
         const projectImage = document.createElement("img");
         const content = document.createElement("div");
         const title = document.createElement("h3");
-        const category = document.createElement("p");
+        const technologies = document.createElement("ul");
         const description = document.createElement("p");
         let imageSource = defaultImage;
 
@@ -79,13 +79,23 @@ function createFeaturedProjectCards(projects, defaultImage) {
 
         content.className = "project-card__content";
         title.textContent = project.title;
-        category.className = "project-card__category";
-        category.textContent = project.categoryLabel;
+        technologies.className = "project-card__technologies";
+
+        /* Chaque technologie reçoit sa propre pastille. La liste reste pilotée par le JSON,
+         * ce qui évite d'écrire les mots-clés directement dans le JavaScript. */
+        for (let technologyIndex = 0; technologyIndex < project.technologies.length; technologyIndex++) {
+            const technology = document.createElement("li");
+
+            technology.className = "project-card__technology";
+            technology.textContent = project.technologies[technologyIndex];
+            technologies.appendChild(technology);
+        }
+
         description.className = "project-card__description";
         description.textContent = project.description;
 
         content.appendChild(title);
-        content.appendChild(category);
+        content.appendChild(technologies);
         content.appendChild(description);
         card.appendChild(projectImage);
         card.appendChild(content);
