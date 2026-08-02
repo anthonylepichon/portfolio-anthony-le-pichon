@@ -40,6 +40,22 @@
     {
       "id": "mvc",
       "label": "MVC"
+    },
+    {
+      "id": "react",
+      "label": "React"
+    },
+    {
+      "id": "symfony",
+      "label": "Symfony"
+    },
+    {
+      "id": "bootstrap",
+      "label": "Bootstrap"
+    },
+    {
+      "id": "doctrine",
+      "label": "Doctrine"
     }
   ],
   "projects": [
@@ -55,6 +71,10 @@
       "description": "Portfolio web responsive présentant mon profil, mes compétences, mon parcours et mes projets. Développé en HTML, SCSS et JavaScript natif, il utilise des fichiers JSON pour générer dynamiquement les contenus et propose un formulaire de contact accessible.",
       "image": "/assets/images/projects/portfolio-anthony-le-pichon.webp",
       "imageAlt": "Capture de l’interface principale du portfolio d’Anthony LE PICHON",
+      "status": {
+        "id": "production",
+        "label": "En production"
+      },
       "featured": true
     },
     {
@@ -72,7 +92,33 @@
       "description": "Application web responsive de partage de recettes développée en PHP orienté objet avec une architecture MVC et MySQL. Elle permet de rechercher des recettes par farine, durée ou difficulté, puis de créer un compte pour publier, modifier, commenter et noter des recettes.",
       "image": "/assets/images/projects/farine-et-potiron.webp",
       "imageAlt": "Capture de l’interface principale du projet Farine et Potiron",
+      "status": {
+        "id": "production",
+        "label": "En production"
+      },
       "featured": false
+    },
+    {
+      "id": 3,
+      "title": "REVISTACK",
+      "technologies": [
+        "React",
+        "Symfony",
+        "PHP",
+        "JavaScript",
+        "SCSS",
+        "Bootstrap",
+        "Doctrine",
+        "MVC"
+      ],
+      "description": "Application web responsive de révision destinée à la préparation d’une certification de développeur web full stack. Elle propose des quiz progressifs assistés par intelligence artificielle, des corrections détaillées et un suivi personnalisé de la progression.",
+      "image": "/assets/images/projects/revistack.webp",
+      "imageAlt": "Capture de la page d’accueil de REVISTACK présentant les quiz et le suivi de progression",
+      "status": {
+        "id": "development",
+        "label": "En développement"
+      },
+      "featured": true
     }
   ]
 }

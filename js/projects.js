@@ -99,6 +99,23 @@ function createProjectCards(projects, defaultImage, featuredIcon) {
 
         visual.appendChild(projectImage);
         content.appendChild(technologies);
+
+        if (project.status !== undefined) {
+            /* Le statut vient du JSON et se place entre les technologies et le titre. */
+            const projectStatus = document.createElement("p");
+
+            projectStatus.className = "projects-card__status";
+            projectStatus.textContent = project.status.label;
+
+            if (project.status.id === "production") {
+                projectStatus.classList.add("projects-card__status--production");
+            } else if (project.status.id === "development") {
+                projectStatus.classList.add("projects-card__status--development");
+            }
+
+            content.appendChild(projectStatus);
+        }
+
         content.appendChild(title);
         content.appendChild(description);
         card.appendChild(visual);

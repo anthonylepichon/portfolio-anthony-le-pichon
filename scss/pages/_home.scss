@@ -235,14 +235,40 @@ $home-border: #cbe5ea;
   box-shadow: 0 8px 20px rgba(11, 11, 11, 0.05);
 }
 
+.project-card__visual {
+  position: relative;
+}
+
 .project-card__image {
   display: block;
   width: 100%;
-  height: 220px;
-  padding: 18px;
-  object-fit: contain;
+  height: auto;
+  /* Les captures 16:9 occupent tout le cadre de la carte, quelle que soit sa largeur. */
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: center;
   background-color: #eef9fb;
   border-bottom: 1px solid $home-border;
+}
+
+/* Le texte du statut complète la couleur et reste discret dans le contenu de la carte. */
+.project-card__status {
+  display: inline-block;
+  padding: 5px 9px;
+  margin: 0 0 10px;
+  color: $home-light;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.2;
+  border-radius: 16px;
+}
+
+.project-card__status--production {
+  background-color: #237a45;
+}
+
+.project-card__status--development {
+  background-color: #a95016;
 }
 
 .project-card__content {
@@ -250,7 +276,8 @@ $home-border: #cbe5ea;
 }
 
 .project-card h3 {
-  min-height: 58px;
+  /* Le titre utilise sa hauteur naturelle pour rapprocher la description, même lorsqu'il tient sur une ligne. */
+  margin-bottom: 8px;
   font-size: 24px;
   line-height: 1.2;
 }
@@ -260,7 +287,7 @@ $home-border: #cbe5ea;
   flex-wrap: wrap;
   gap: 8px;
   padding: 0;
-  margin: 18px 0;
+  margin: 18px 0 10px;
   list-style: none;
 }
 
@@ -649,12 +676,7 @@ $home-border: #cbe5ea;
     gap: 28px;
   }
 
-  .project-card__image {
-    height: 210px;
-  }
-
   .project-card h3 {
-    min-height: 0;
     font-size: 22px;
   }
 

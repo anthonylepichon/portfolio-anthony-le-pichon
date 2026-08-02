@@ -54,6 +54,7 @@ function createFeaturedProjectCards(projects, defaultImage) {
     for (let index = 0; index < projects.length; index++) {
         const project = projects[index];
         const card = document.createElement("article");
+        const visual = document.createElement("div");
         const projectImage = document.createElement("img");
         const content = document.createElement("div");
         const title = document.createElement("h3");
@@ -62,6 +63,7 @@ function createFeaturedProjectCards(projects, defaultImage) {
         let imageSource = defaultImage;
 
         card.className = "project-card";
+        visual.className = "project-card__visual";
 
         /* L'image définie dans le JSON remplace l'illustration générique dès qu'elle existe. */
         if (project.image !== undefined && project.image !== "") {
@@ -76,6 +78,8 @@ function createFeaturedProjectCards(projects, defaultImage) {
         if (project.imageAlt !== undefined) {
             projectImage.alt = project.imageAlt;
         }
+
+        visual.appendChild(projectImage);
 
         content.className = "project-card__content";
         title.textContent = project.title;
@@ -94,10 +98,27 @@ function createFeaturedProjectCards(projects, defaultImage) {
         description.className = "project-card__description";
         description.textContent = project.description;
 
-        content.appendChild(title);
         content.appendChild(technologies);
+
+        if (project.status !== undefined) {
+            /* Le statut est ajouté au contenu après les technologies et avant le titre. */
+            const projectStatus = document.createElement("p");
+
+            projectStatus.className = "project-card__status";
+            projectStatus.textContent = project.status.label;
+
+            if (project.status.id === "production") {
+                projectStatus.classList.add("project-card__status--production");
+            } else if (project.status.id === "development") {
+                projectStatus.classList.add("project-card__status--development");
+            }
+
+            content.appendChild(projectStatus);
+        }
+
+        content.appendChild(title);
         content.appendChild(description);
-        card.appendChild(projectImage);
+        card.appendChild(visual);
         card.appendChild(content);
         homeProjectsList.appendChild(card);
     }
