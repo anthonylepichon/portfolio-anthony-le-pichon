@@ -176,8 +176,8 @@
         "WEBDEV Serveur"
       ],
       "description": "Application web destinée aux comités sociaux et économiques (CSE), conçue intégralement avec WEBDEV, de la rédaction du cahier des charges à la mise en production et à la maintenance. Elle propose aux salariés un espace de communication et de commande d’offres subventionnées, ainsi qu’un back-office permettant aux élus du CSE de paramétrer le site et de préparer les éléments comptables.",
-      "image": "/assets/images/projects/mybord.webp",
-      "imageAlt": "Image temporaire du projet Mybord utilisée pour présenter CSEPRIME WEB",
+      "image": "/assets/images/projects/cseprimeweb.webp",
+      "imageAlt": "Capture de l’interface principale du projet CSEPRIME WEB",
       "status": {
         "id": "production",
         "label": "En production"
@@ -195,8 +195,8 @@
         "iOS"
       ],
       "description": "Application mobile Android et iOS complémentaire de CSEPRIME WEB, développée avec WINDEV Mobile. Elle reprend les services destinés aux salariés et intègre des fonctionnalités supplémentaires pour les élus du CSE, notamment la saisie de leurs notes de frais.",
-      "image": "/assets/images/illustrations/projets.svg",
-      "imageAlt": "Illustration temporaire utilisée pour présenter le projet CSEPRIME MOBILE",
+      "image": "/assets/images/projects/cseprimemobile.webp",
+      "imageAlt": "Capture de l’interface principale du projet CSEPRIME MOBILE",
       "status": {
         "id": "production",
         "label": "En production"
