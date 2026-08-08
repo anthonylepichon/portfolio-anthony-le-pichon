@@ -228,6 +228,33 @@
     </footer>
     <!-- Fin du footer. -->
 
+    <!--
+        Données structurées SEO : ProfilePage précise que cette page présente le profil
+        professionnel d'Anthony Le Pichon. Le même identifiant #person que sur l'accueil
+        permet aux moteurs de recherche de comprendre qu'il s'agit de la même personne.
+    -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "ProfilePage",
+            "@id": "https://anthonylepichon.com/pages/a-propos.html#profile-page",
+            "url": "https://anthonylepichon.com/pages/a-propos.html",
+            "name": "À propos d'Anthony Le Pichon",
+            "mainEntity": {
+                "@type": "Person",
+                "@id": "https://anthonylepichon.com/#person",
+                "name": "Anthony Le Pichon",
+                "url": "https://anthonylepichon.com/",
+                "image": "https://anthonylepichon.com/assets/images/profile/portrait-anthony-le-pichon.png",
+                "jobTitle": "Développeur web full stack freelance",
+                "sameAs": [
+                    "https://www.linkedin.com/in/anthonylepichon/",
+                    "https://github.com/anthonylepichon"
+                ]
+            }
+        }
+    </script>
+
     <!-- Le script est placé à la fin pour que le HTML soit chargé avant son exécution. -->
     <script src="../js/header.js"></script>
     <script src="../js/page-transitions.js"></script>

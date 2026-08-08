@@ -321,6 +321,27 @@
     </footer>
     <!-- Fin du footer. -->
 
+    <!--
+        Données structurées SEO : ce bloc décrit l'identité professionnelle présentée
+        sur le portfolio. Il n'affiche aucun contenu, mais aide les moteurs de recherche
+        à relier le site aux profils publics LinkedIn et GitHub d'Anthony Le Pichon.
+    -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "@id": "https://anthonylepichon.com/#person",
+            "name": "Anthony Le Pichon",
+            "url": "https://anthonylepichon.com/",
+            "image": "https://anthonylepichon.com/assets/images/profile/portrait-anthony-le-pichon.png",
+            "jobTitle": "Développeur web full stack freelance",
+            "sameAs": [
+                "https://www.linkedin.com/in/anthonylepichon/",
+                "https://github.com/anthonylepichon"
+            ]
+        }
+    </script>
+
     <!-- Le script est placé à la fin pour que le HTML soit chargé avant son exécution. -->
     <script src="js/header.js"></script>
     <script src="js/page-transitions.js"></script>
