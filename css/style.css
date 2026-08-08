@@ -191,6 +191,144 @@ body {
   }
 }
 /*
+ * Le bandeau reste fixé en bas de l'écran pour que le choix soit immédiatement accessible.
+ * Il ne bloque pas la navigation : le visiteur peut lire la page avant de répondre.
+ */
+.cookie-banner {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 24px;
+  background-color: #ffffff;
+  border-top: 4px solid #078fa7;
+  box-shadow: 0 -8px 24px rgba(47, 52, 55, 0.18);
+}
+
+/* L'attribut hidden est piloté par JavaScript lorsque le choix a déjà été enregistré. */
+.cookie-banner[hidden] {
+  display: none;
+}
+
+.cookie-banner__inner {
+  display: flex;
+  width: min(100%, 1120px);
+  margin: 0 auto;
+  gap: 32px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cookie-banner__content {
+  max-width: 760px;
+}
+
+.cookie-banner h2 {
+  margin: 0 0 8px;
+  color: #2f3437;
+  font-family: "Rajdhani", Arial, sans-serif;
+  font-size: 26px;
+}
+
+.cookie-banner p {
+  margin: 0;
+  line-height: 1.55;
+}
+
+.cookie-banner a {
+  color: #057d92;
+}
+
+.cookie-banner a:hover,
+.cookie-banner a:focus-visible {
+  color: #045d6c;
+}
+
+.cookie-banner__actions {
+  display: flex;
+  flex-shrink: 0;
+  gap: 12px;
+}
+
+/*
+ * Les deux choix ont exactement la même taille et la même présentation.
+ * Cette égalité visuelle évite d'inciter le visiteur à accepter plutôt qu'à refuser.
+ */
+.cookie-banner__button {
+  min-width: 128px;
+  min-height: 48px;
+  padding: 10px 20px;
+  color: #ffffff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: #057d92;
+  border: 2px solid #057d92;
+  border-radius: 8px;
+}
+
+.cookie-banner__button:hover,
+.cookie-banner__button:focus-visible {
+  background-color: #045d6c;
+  border-color: #045d6c;
+}
+
+.cookie-banner a:focus-visible,
+.cookie-banner__button:focus-visible,
+.site-footer__cookie-settings:focus-visible {
+  outline: 3px solid #078fa7;
+  outline-offset: 3px;
+}
+
+/* Le bouton du footer ressemble aux autres liens, tout en restant une vraie action HTML. */
+.site-footer__cookie-settings {
+  padding: 0;
+  color: #2f3437;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  background: none;
+  border: 0;
+}
+
+.site-footer__cookie-settings:hover,
+.site-footer__cookie-settings:focus-visible {
+  color: #078fa7;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 760px) {
+  /* Sur tablette et mobile, le texte et les actions s'empilent pour préserver la lisibilité. */
+  .cookie-banner {
+    padding: 20px 24px;
+  }
+  .cookie-banner__inner {
+    display: grid;
+    gap: 20px;
+  }
+  .cookie-banner__actions {
+    width: 100%;
+  }
+  .cookie-banner__button {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 420px) {
+  .cookie-banner__actions {
+    display: grid;
+  }
+  .cookie-banner__button {
+    width: 100%;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  /* La transition reste discrète et n'est activée que si les mouvements sont autorisés. */
+  .cookie-banner__button {
+    transition: background-color 160ms ease, border-color 160ms ease;
+  }
+}
+/*
  * Le même header est écrit dans chaque page HTML.
  * Ce fichier unique conserve néanmoins tous ses styles au même endroit.
  * Les classes is-open sont ajoutées et retirées seulement par js/header.js sur tablette et mobile.
@@ -2769,6 +2907,11 @@ body {
   background-color: #ffffff;
   border: 1px solid #c8e4e9;
   border-radius: 10px;
+}
+
+/* L'ancre Analytics reste visible sous le header sticky après un clic depuis le bandeau. */
+.legal-page__section[id] {
+  scroll-margin-top: 88px;
 }
 
 .legal-page h2 {

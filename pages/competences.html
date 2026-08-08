@@ -187,6 +187,8 @@
                 <ul>
                     <li><a href="mentions-legales.html">Mentions légales</a></li>
                     <li><a href="politique-confidentialite.html">Politique de confidentialité</a></li>
+                    <!-- Ce bouton rouvre le choix des cookies sans changer de page. -->
+                    <li><button class="site-footer__cookie-settings" type="button" hidden>Gérer les cookies</button></li>
                 </ul>
             </nav>
 
@@ -207,10 +209,33 @@
     </footer>
     <!-- Fin du footer. -->
 
+    <!--
+        Gestion des cookies : le bandeau reste caché lorsqu'un choix a déjà été enregistré.
+        Les deux boutons ont la même importance et aucune donnée n'est envoyée avant l'acceptation.
+    -->
+    <aside class="cookie-banner" aria-labelledby="cookie-consent-title" hidden>
+        <div class="cookie-banner__inner">
+            <div class="cookie-banner__content">
+                <h2 id="cookie-consent-title" tabindex="-1">Mesure d'audience</h2>
+                <p>
+                    Avec votre accord, Google Analytics m'aide à comprendre l'utilisation du portfolio.
+                    Vous pouvez accepter, refuser ou modifier votre choix à tout moment.
+                    <a href="politique-confidentialite.html#analytics">En savoir plus</a>.
+                </p>
+            </div>
+            <div class="cookie-banner__actions">
+                <button id="cookie-consent-refuse" class="cookie-banner__button" type="button">Refuser</button>
+                <button id="cookie-consent-accept" class="cookie-banner__button" type="button">Accepter</button>
+            </div>
+        </div>
+    </aside>
+    <p id="cookie-consent-status" class="visually-hidden" aria-live="polite"></p>
+
     <!-- Le script est placé à la fin pour que le HTML soit chargé avant son exécution. -->
     <script src="../js/header.js"></script>
     <script src="../js/page-transitions.js"></script>
     <script src="../js/content-animations.js"></script>
     <script src="../js/skills.js"></script>
+    <script src="../js/analytics-consent.js"></script>
 </body>
 </html>

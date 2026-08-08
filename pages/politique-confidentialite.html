@@ -59,8 +59,10 @@
             <div class="legal-container">
                 <h1 id="privacy-title">Politique de confidentialité</h1>
                 <p class="legal-page__introduction">
-                    Cette politique explique comment les données envoyées depuis le formulaire de contact sont utilisées.
+                    Cette politique explique comment les données envoyées depuis le formulaire de contact
+                    et les données de mesure d'audience sont utilisées.
                 </p>
+                <p>Dernière mise à jour : <time datetime="2026-08-08">8 août 2026</time>.</p>
 
                 <article class="legal-page__section">
                     <h2>Responsable du traitement</h2>
@@ -122,11 +124,39 @@
                     </p>
                 </article>
 
-                <article class="legal-page__section">
-                    <h2>Cookies et traceurs</h2>
+                <article id="analytics" class="legal-page__section">
+                    <h2>Mesure d'audience et cookies</h2>
                     <p>
-                        Le site ne dépose pas de cookie publicitaire, de mesure d'audience ou de suivi de
-                        navigation. Il ne propose donc pas de bannière de consentement aux cookies.
+                        Avec votre consentement, le site utilise Google Analytics 4 pour comprendre quelles
+                        pages sont consultées, comment les visiteurs arrivent sur le portfolio et quelles
+                        interactions générales sont réalisées. Ces statistiques servent à améliorer le contenu
+                        et à mesurer l'intérêt porté aux services présentés.
+                    </p>
+                    <p>
+                        Google Analytics n'est pas chargé avant votre acceptation. Le site n'envoie jamais à
+                        cet outil le contenu des champs du formulaire, votre nom, votre adresse e-mail ou votre
+                        message. Les fonctions publicitaires, Google Signals et la personnalisation des annonces
+                        sont désactivées dans le code du portfolio.
+                    </p>
+                    <p>
+                        Après acceptation, Google Analytics peut déposer les cookies <code>_ga</code> et
+                        <code>_ga_DEGXVTCYL5</code>. Ils servent respectivement à distinguer les visiteurs et à
+                        conserver l'état d'une session. Leur durée est limitée à treize mois à compter de leur
+                        création. Les données détaillées associées aux utilisateurs et aux événements sont
+                        conservées pendant deux mois dans la propriété Analytics.
+                    </p>
+                    <p>
+                        Le choix « accepté » ou « refusé » est conservé uniquement dans le stockage local de
+                        votre navigateur sous le nom <code>analytics-consent</code>. Cette préférence n'est pas
+                        transmise à Google. Vous pouvez la modifier à tout moment avec le bouton « Gérer les
+                        cookies » présent dans le footer. En cas de refus, les prochains envois sont bloqués et
+                        les éventuels cookies Analytics sont supprimés.
+                    </p>
+                    <p>
+                        Ce traitement repose sur votre consentement. Google agit comme fournisseur du service
+                        de mesure et peut traiter des données en dehors de l'Espace économique européen.
+                        Consultez la
+                        <a href="https://policies.google.com/privacy?hl=fr" target="_blank" rel="noopener noreferrer">politique de confidentialité de Google, nouvel onglet</a>.
                     </p>
                 </article>
 
@@ -170,6 +200,8 @@
                 <ul>
                     <li><a href="mentions-legales.html">Mentions légales</a></li>
                     <li><a href="politique-confidentialite.html" aria-current="page">Politique de confidentialité</a></li>
+                    <!-- Ce bouton rouvre le choix des cookies sans changer de page. -->
+                    <li><button class="site-footer__cookie-settings" type="button" hidden>Gérer les cookies</button></li>
                 </ul>
             </nav>
             <address class="site-footer__contact">
@@ -182,9 +214,32 @@
     </footer>
     <!-- Fin du footer. -->
 
+    <!--
+        Gestion des cookies : le bandeau reste caché lorsqu'un choix a déjà été enregistré.
+        Les deux boutons ont la même importance et aucune donnée n'est envoyée avant l'acceptation.
+    -->
+    <aside class="cookie-banner" aria-labelledby="cookie-consent-title" hidden>
+        <div class="cookie-banner__inner">
+            <div class="cookie-banner__content">
+                <h2 id="cookie-consent-title" tabindex="-1">Mesure d'audience</h2>
+                <p>
+                    Avec votre accord, Google Analytics m'aide à comprendre l'utilisation du portfolio.
+                    Vous pouvez accepter, refuser ou modifier votre choix à tout moment.
+                    <a href="#analytics">En savoir plus</a>.
+                </p>
+            </div>
+            <div class="cookie-banner__actions">
+                <button id="cookie-consent-refuse" class="cookie-banner__button" type="button">Refuser</button>
+                <button id="cookie-consent-accept" class="cookie-banner__button" type="button">Accepter</button>
+            </div>
+        </div>
+    </aside>
+    <p id="cookie-consent-status" class="visually-hidden" aria-live="polite"></p>
+
     <!-- Le script est placé à la fin pour que le HTML soit chargé avant son exécution. -->
     <script src="../js/header.js"></script>
     <script src="../js/page-transitions.js"></script>
     <script src="../js/content-animations.js"></script>
+    <script src="../js/analytics-consent.js"></script>
 </body>
 </html>

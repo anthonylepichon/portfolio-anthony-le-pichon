@@ -36,6 +36,11 @@
   border-radius: 10px;
 }
 
+/* L'ancre Analytics reste visible sous le header sticky après un clic depuis le bandeau. */
+.legal-page__section[id] {
+  scroll-margin-top: 88px;
+}
+
 .legal-page h2 {
   margin: 0 0 16px;
   color: #2f3437;
